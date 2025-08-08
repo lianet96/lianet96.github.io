@@ -1,17 +1,97 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lianet Rodriguez – Filmmaker & Visual Artist</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lianet Rodriguez | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0f0f0f;
+      color: #f2f2f2;
+      font-family: 'Georgia', serif;
+    }
+    header {
+      padding: 1em 2em;
+      background: #1a1a1a;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      padding: 1em;
+      background-color: #141414;
+    }
+    nav a {
+      color: #f9c7c7;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 2em;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .video, .illustration {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5em;
+    }
+    iframe, img {
+      width: 100%;
+      border-radius: 0.5em;
+    }
+    footer {
+      text-align: center;
+      padding: 2em;
+      font-size: 0.9em;
+      background: #1a1a1a;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
+  <header>
     <h1>Lianet Rodriguez</h1>
-    <p>Filmmaker. Storyteller. Dreamer.</p>
-    <p><a href="mailto:lianetik96@gmail.com">Contact me</a> • <a href="https://www.instagram.com/yourhandle" target="_blank">Instagram</a></p>
-    <img src="media/reel-poster.jpg" alt="film still" style="max-width:100%; margin-top:20px;">
-  </div>
+    <p>Filmmaker & Visual Artist</p>
+  </header>
+
+  <nav>
+    <a href="#video">Video</a>
+    <a href="#illustration">Illustration</a>
+    <a href="mailto:lianetik96@gmail.com">Contact</a>
+  </nav>
+
+  <section id="video">
+    <h2>Video Work</h2>
+    <div class="video">
+      <!-- Example YouTube embed -->
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Your Film Title" frameborder="0" allowfullscreen></iframe>
+      <!-- Add more <iframe> as needed -->
+    </div>
+  </section>
+
+  <section id="illustration">
+    <h2>Illustration Work</h2>
+    <div class="illustration">
+      <img src="media/illustration1.jpg" alt="Illustration 1">
+      <img src="media/illustration2.jpg" alt="Illustration 2">
+      <!-- Add more <img> tags as needed -->
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Lianet Rodriguez. All rights reserved.
+  </footer>
 </body>
 </html>
+
