@@ -1,22 +1,16 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Welcome to Lianet Rodriguez’s film and illustration portfolio.">
-  <link rel="icon" type="image/png" href="media/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
   <title>Welcome | Lianet Rodriguez</title>
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
   <style>
     :root {
-      --thistle: #cdb4dbff;
-      --fairy-tale: #ffc8ddff;
-      --carnation-pink: #ffafccff;
-      --uranian-blue: #bde0feff;
-      --light-sky-blue: #a2d2ffff;
+      --thistle: #cdb4db;
+      --fairy-tale: #ffc8dd;
+      --carnation-pink: #ffafcc;
+      --uranian-blue: #bde0fe;
+      --light-sky-blue: #a2d2ff;
       --dark-text: #1a1a1a;
     }
 
@@ -36,6 +30,20 @@
       height: 100vh;
       font-family: 'DM Serif Display', serif;
       color: var(--dark-text);
+      position: relative;
+    }
+
+    .grain-overlay {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('media/grain.png');
+      opacity: 0.07;
+      z-index: 2;
+      pointer-events: none;
     }
 
     .welcome-container {
@@ -44,8 +52,7 @@
       padding: 3em;
       border-radius: 20px;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-      opacity: 0;
-      animation: fadeIn 2s ease forwards;
+      z-index: 3;
     }
 
     h1 {
@@ -77,31 +84,19 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
   </style>
 </head>
 <body>
+  <div class="grain-overlay"></div>
   <div class="welcome-container">
     <h1>Welcome</h1>
     <p>Enter the creative world of Lianet Rodriguez — film, illustration, and visual storytelling.</p>
-    <a href="portfolio.html" class="enter-button" aria-label="Enter the portfolio website of Lianet Rodriguez">Enter Portfolio</a>
+    <a href="portfolio.html" class="enter-button">Enter Portfolio</a>
   </div>
-
-  <!-- ✅ JavaScript auto-redirect after 6 seconds -->
   <script>
     setTimeout(() => {
       window.location.href = 'portfolio.html';
     }, 6000);
   </script>
-
-  <!-- ✅ Fallback for non-JavaScript users -->
-  <noscript>
-    <meta http-equiv="refresh" content="6;url=portfolio.html" />
-  </noscript>
 </body>
 </html>
