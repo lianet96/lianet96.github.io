@@ -1,0 +1,25 @@
+body {
+  background-color: #0d0d0d;
+  color: #f0f0f0;
+  font-family: 'Georgia', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  margin: 0;
+}
+
+.container {
+  max-width: 600px;
+  padding: 2em;
+}
+
+a {
+  color: #f9c7c7;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
