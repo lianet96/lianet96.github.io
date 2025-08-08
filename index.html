@@ -1,9 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lianet Rodriguez | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
   <style>
     :root {
       --thistle: #cdb4dbff;
@@ -11,100 +11,86 @@
       --carnation-pink: #ffafccff;
       --uranian-blue: #bde0feff;
       --light-sky-blue: #a2d2ffff;
+      --dark-text: #1a1a1a;
     }
-
     body {
       margin: 0;
       padding: 0;
-      background-color: var(--thistle);
-      color: #1a1a1a;
+      background: white;
+      color: var(--dark-text);
       font-family: 'Georgia', serif;
-      scroll-behavior: smooth;
     }
-    header {
-      padding: 2em;
-      background: var(--fairy-tale);
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: var(--thistle);
+      opacity: 0.2;
+      pointer-events: none;
     }
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 2em;
-      padding: 1em;
-      background-color: var(--carnation-pink);
-      position: sticky;
+      position: fixed;
       top: 0;
-      z-index: 1000;
+      width: 100%;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1.5em;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      z-index: 100;
     }
     nav a {
-      color: #1a1a1a;
       text-decoration: none;
+      color: var(--dark-text);
+      font-size: 1em;
       font-weight: bold;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      padding: 4em 2em;
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    .video, .illustration {
+    .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 2em;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 0;
+      margin-top: 60px;
     }
-    iframe, img {
+    .gallery img, .gallery iframe {
       width: 100%;
-      border-radius: 0.5em;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    .section-heading {
+      padding: 2em;
+      text-align: center;
+      font-size: 2em;
+      background: var(--fairy-tale);
     }
     footer {
       text-align: center;
       padding: 2em;
       font-size: 0.9em;
       background: var(--light-sky-blue);
-      color: #333;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Lianet Rodriguez</h1>
-    <p>Filmmaker & Visual Artist</p>
-  </header>
-
   <nav>
-    <a href="#video">Video</a>
-    <a href="#illustration">Illustration</a>
-    <a href="mailto:lianetik96@gmail.com">Contact</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <main>
-    <section id="video">
-      <h2>Video Work</h2>
-      <div class="video">
-        <!-- Example YouTube embed -->
-        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Your Film Title" frameborder="0" allowfullscreen></iframe>
-        <!-- Add more <iframe> as needed -->
-      </div>
-    </section>
-
-    <section id="illustration">
-      <h2>Illustration Work</h2>
-      <div class="illustration">
-        <img src="media/illustration1.jpg" alt="Illustration 1">
-        <img src="media/illustration2.jpg" alt="Illustration 2">
-        <!-- Add more <img> tags as needed -->
-      </div>
-    </section>
-  </main>
+  <section class="gallery">
+    <!-- Example items -->
+    <img src="media/illustration1.jpg" alt="Illustration 1">
+    <img src="media/illustration2.jpg" alt="Illustration 2">
+    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    <!-- Add as many as you'd like -->
+  </section>
 
   <footer>
+    &copy; 2025 Lianet Rodriguez.
+  </footer>
+</body>
+</html>
+
     &copy; 2025 Lianet Rodriguez. All rights reserved.
   </footer>
 </body>
