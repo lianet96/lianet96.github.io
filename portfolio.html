@@ -3,8 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio site for filmmaker and artist Lianet Rodriguez.">
-  <link rel="icon" type="image/png" href="media/favicon.png" />
   <title>Lianet Rodriguez | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
   <style>
@@ -28,6 +26,21 @@
       overflow-x: hidden;
       position: relative;
     }
+
+    /* Grain overlay for soft vintage texture */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+      opacity: 0.1;
+      z-index: 1;
+    }
+
     header {
       display: flex;
       justify-content: space-between;
@@ -38,6 +51,8 @@
       background: white;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 2;
     }
     .site-title {
       font-size: 1.6em;
@@ -72,6 +87,8 @@
       display: flex;
       flex-direction: column;
       gap: 4em;
+      position: relative;
+      z-index: 2;
     }
     section {
       background: white;
@@ -103,10 +120,6 @@
       object-fit: cover;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-    .gallery iframe {
-      aspect-ratio: 16 / 9;
-      height: auto;
-    }
     .contact-content {
       display: flex;
       flex-direction: column;
@@ -129,6 +142,8 @@
       background: var(--light-sky-blue);
       color: #333;
       font-size: 0.9em;
+      position: relative;
+      z-index: 2;
     }
     .bubbles {
       position: fixed;
@@ -136,25 +151,27 @@
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: -1;
+      z-index: 0;
       overflow: hidden;
     }
     .bubble {
       position: absolute;
-      width: 60px;
-      height: 60px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      opacity: 0.2;
-      animation: float 20s infinite ease-in-out;
+      opacity: 0.3;
+      animation: floaty 16s infinite ease-in-out;
     }
-    .bubble:nth-child(1) { background: var(--carnation-pink); top: 10%; left: 20%; animation-delay: 0s; }
-    .bubble:nth-child(2) { background: var(--fairy-tale); top: 40%; left: 70%; animation-delay: 5s; }
-    .bubble:nth-child(3) { background: var(--uranian-blue); top: 80%; left: 10%; animation-delay: 10s; }
-    .bubble:nth-child(4) { background: var(--light-sky-blue); top: 50%; left: 50%; animation-delay: 15s; }
+    .bubble:nth-child(1) { background: var(--carnation-pink); top: 80%; left: 10%; animation-delay: 0s; }
+    .bubble:nth-child(2) { background: var(--fairy-tale); top: 70%; left: 30%; animation-delay: 3s; }
+    .bubble:nth-child(3) { background: var(--uranian-blue); top: 60%; left: 60%; animation-delay: 6s; }
+    .bubble:nth-child(4) { background: var(--light-sky-blue); top: 90%; left: 80%; animation-delay: 9s; }
 
-    @keyframes float {
+    @keyframes floaty {
       0% { transform: translateY(0) scale(1); }
-      50% { transform: translateY(-40px) scale(1.2); }
+      25% { transform: translateY(-30px) scale(1.1); }
+      50% { transform: translateY(-60px) scale(0.95); }
+      75% { transform: translateY(-30px) scale(1.05); }
       100% { transform: translateY(0) scale(1); }
     }
 
@@ -200,15 +217,15 @@
     <section id="illustration">
       <h2>Illustration Work (Preview)</h2>
       <div class="gallery">
-        <img src="media/illustration1.jpg" alt="Surreal illustration of a dreamlike scene">
-        <img src="media/illustration2.jpg" alt="Illustration featuring vibrant colors and symbolism">
+        <img src="media/illustration1.jpg" alt="Illustration 1">
+        <img src="media/illustration2.jpg" alt="Illustration 2">
       </div>
     </section>
 
     <section id="video">
       <h2>Video Work (Preview)</h2>
       <div class="gallery">
-        <iframe src="https://www.youtube.com/embed/EsO0M8uTfdw?start=77" title="Haunted Hours film preview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/EsO0M8uTfdw?start=77" title="Film Title Placeholder" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </section>
 
@@ -243,4 +260,3 @@
   </script>
 </body>
 </html>
-
