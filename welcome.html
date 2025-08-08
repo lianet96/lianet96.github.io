@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome | Lianet Rodriguez</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --thistle: #cdb4dbff;
+      --fairy-tale: #ffc8ddff;
+      --carnation-pink: #ffafccff;
+      --uranian-blue: #bde0feff;
+      --light-sky-blue: #a2d2ffff;
+      --dark-text: #1a1a1a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(120deg, var(--thistle), var(--fairy-tale), var(--carnation-pink), var(--uranian-blue), var(--light-sky-blue));
+      background-size: 400% 400%;
+      animation: gradientShift 20s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'DM Serif Display', serif;
+      color: var(--dark-text);
+    }
+
+    .welcome-container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 3em;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 1.5em;
+    }
+
+    a.enter-button {
+      text-decoration: none;
+      padding: 0.8em 2em;
+      background: var(--carnation-pink);
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    a.enter-button:hover {
+      background: var(--fairy-tale);
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="welcome-container">
+    <h1>Welcome</h1>
+    <p>Enter the creative world of Lianet Rodriguez — film, illustration, and visual storytelling.</p>
+    <a href="portfolio.html" class="enter-button">Enter Portfolio</a>
+  </div>
+</body>
+</html>
