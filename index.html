@@ -3,6 +3,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lianet Rodriguez | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
   <style>
     :root {
       --thistle: #cdb4dbff;
@@ -17,23 +18,35 @@
       padding: 0;
       background: var(--thistle);
       color: var(--dark-text);
-      font-family: 'Georgia', serif;
+      font-family: 'DM Serif Display', serif;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5em 2em;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .site-title {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    .site-title a {
+      text-decoration: none;
+      color: var(--dark-text);
     }
     nav {
-      position: sticky;
-      top: 0;
-      width: 100%;
-      padding: 1em 2em;
-      background: var(--carnation-pink);
       display: flex;
-      justify-content: flex-end;
-      gap: 1.5em;
-      z-index: 1000;
+      gap: 2em;
     }
     nav a {
       text-decoration: none;
       color: var(--dark-text);
       font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     main {
       max-width: 900px;
@@ -71,13 +84,28 @@
       color: #333;
       font-size: 0.9em;
     }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        flex-wrap: wrap;
+        gap: 1em;
+      }
+    }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <header>
+    <div class="site-title">
+      <a href="/">Lianet Rodriguez</a>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
   <main>
     <section id="about">
@@ -107,7 +135,3 @@
 </body>
 </html>
 
-    &copy; 2025 Lianet Rodriguez. All rights reserved.
-  </footer>
-</body>
-</html>
