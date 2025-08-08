@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lianet Rodriguez | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --thistle: #cdb4dbff;
@@ -21,7 +22,7 @@
       padding: 0;
       background: var(--thistle);
       color: var(--dark-text);
-      font-family: 'DM Serif Display', serif;
+      font-family: 'Quicksand', sans-serif;
       overflow-x: hidden;
       position: relative;
     }
@@ -51,9 +52,8 @@
       position: relative;
     }
     .site-title {
-      font-size: 1.6em;
-      font-weight: bold;
-      color: var(--dark-text);
+      font-size: 1.8em;
+      font-weight: 600;
     }
     .site-title a {
       text-decoration: none;
@@ -70,7 +70,7 @@
     nav a {
       text-decoration: none;
       color: var(--dark-text);
-      font-weight: bold;
+      font-weight: 600;
       transition: color 0.3s ease;
     }
     nav a:hover {
@@ -114,11 +114,6 @@
       object-fit: cover;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-    .gallery img:hover,
-    .gallery iframe:hover {
-      box-shadow: 0 0 20px rgba(255, 200, 221, 0.4);
-      transform: scale(1.01);
-    }
     footer {
       text-align: center;
       padding: 2em;
@@ -140,7 +135,7 @@
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      opacity: 0.2;
+      opacity: 0.15;
       animation: float 20s infinite ease-in-out;
     }
     .bubble:nth-child(1) { background: var(--carnation-pink); top: 10%; left: 20%; animation-delay: 0s; }
@@ -173,7 +168,6 @@
     <div class="bubble"></div>
     <div class="bubble"></div>
   </div>
-
   <header>
     <div class="site-title">
       <a href="/">Lianet Rodriguez</a>
@@ -183,13 +177,11 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
-
   <main>
     <section id="about">
       <h2>About Me</h2>
       <p>Hello! I'm Lianet Rodriguez, a filmmaker and visual artist based in Miami. I create short films, illustrations, and experimental art that explore culture, identity, and the surreal beauty of the everyday. I’m currently building my portfolio and would love to collaborate or connect. Feel free to reach out!</p>
     </section>
-
     <section id="illustration">
       <h2>Illustration Work</h2>
       <div class="gallery">
@@ -197,13 +189,12 @@
         <img src="media/illustration2.jpg" alt="Illustration 2">
       </div>
     </section>
-
     <section id="video">
       <h2>Video Work</h2>
       <div class="gallery">
         <iframe
           src="https://www.youtube.com/embed/EsO0M8uTfdw?start=77"
-          title="Film Title Placeholder"
+          title="Film Reel"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
@@ -211,11 +202,9 @@
       </div>
     </section>
   </main>
-
   <footer>
     &copy; 2025 Lianet Rodriguez. All rights reserved.
   </footer>
-
   <script>
     const sections = document.querySelectorAll('section');
     const observer = new IntersectionObserver(entries => {
@@ -232,3 +221,4 @@
   </script>
 </body>
 </html>
+
