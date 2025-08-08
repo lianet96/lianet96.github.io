@@ -13,6 +13,9 @@
       --light-sky-blue: #a2d2ffff;
       --dark-text: #1a1a1a;
     }
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       padding: 0;
@@ -27,26 +30,33 @@
       padding: 1.5em 2em;
       max-width: 1000px;
       margin: 0 auto;
+      position: relative;
     }
     .site-title {
-      font-size: 1.5em;
+      font-size: 1.6em;
       font-weight: bold;
+      color: var(--dark-text);
     }
     .site-title a {
       text-decoration: none;
       color: var(--dark-text);
+      transition: color 0.3s ease;
+    }
+    .site-title a:hover {
+      color: var(--carnation-pink);
     }
     nav {
       display: flex;
-      gap: 2em;
+      gap: 1.5em;
     }
     nav a {
       text-decoration: none;
       color: var(--dark-text);
       font-weight: bold;
+      transition: color 0.3s ease;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: var(--fairy-tale);
     }
     main {
       max-width: 900px;
@@ -59,12 +69,18 @@
     section {
       background: white;
       padding: 2em;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
     }
     h2 {
       margin-top: 0;
-      font-size: 1.8em;
+      font-size: 2em;
+      color: var(--fairy-tale);
     }
     .gallery {
       display: flex;
@@ -74,8 +90,9 @@
     .gallery img,
     .gallery iframe {
       width: 100%;
-      border-radius: 8px;
+      border-radius: 10px;
       object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
     footer {
       text-align: center;
@@ -90,6 +107,7 @@
         align-items: flex-start;
       }
       nav {
+        margin-top: 1em;
         flex-wrap: wrap;
         gap: 1em;
       }
@@ -134,4 +152,3 @@
   </footer>
 </body>
 </html>
-
