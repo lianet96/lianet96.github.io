@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome | Lianet Rodriguez</title>
+  <meta name="description" content="Welcome to Lianet Rodriguez’s film and illustration portfolio.">
+  <link rel="icon" type="image/png" href="media/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <title>Welcome | Lianet Rodriguez</title>
+
   <style>
     :root {
       --thistle: #cdb4dbff;
@@ -39,6 +44,8 @@
       padding: 3em;
       border-radius: 20px;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
     }
 
     h1 {
@@ -70,20 +77,31 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="welcome-container">
     <h1>Welcome</h1>
     <p>Enter the creative world of Lianet Rodriguez — film, illustration, and visual storytelling.</p>
-    <a href="portfolio.html" class="enter-button">Enter Portfolio</a>
+    <a href="portfolio.html" class="enter-button" aria-label="Enter the portfolio website of Lianet Rodriguez">Enter Portfolio</a>
   </div>
 
-  <!-- ✅ Auto-redirect after 6 seconds -->
+  <!-- ✅ JavaScript auto-redirect after 6 seconds -->
   <script>
     setTimeout(() => {
       window.location.href = 'portfolio.html';
-    }, 6000); // 6000 milliseconds = 6 seconds
+    }, 6000);
   </script>
+
+  <!-- ✅ Fallback for non-JavaScript users -->
+  <noscript>
+    <meta http-equiv="refresh" content="6;url=portfolio.html" />
+  </noscript>
 </body>
 </html>
