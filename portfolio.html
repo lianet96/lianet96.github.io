@@ -1,205 +1,112 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lianet Rodriguez | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap" rel="stylesheet">
   <style>
     :root {
-      --thistle: #cdb4dbff;
-      --fairy-tale: #ffc8ddff;
-      --carnation-pink: #ffafccff;
-      --uranian-blue: #bde0feff;
-      --light-sky-blue: #a2d2ffff;
-      --dark-text: #1a1a1a;
-    }
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      background: var(--thistle);
-      color: var(--dark-text);
-      font-family: 'DM Serif Display', serif;
-      overflow-x: hidden;
-      position: relative;
+      --pink: #ffc0cb;
+      --purple: #dda0dd;
+      --blue: #add8e6;
+      --yellow: #fffacd;
+      --border: #ff69b4;
     }
 
-    /* Grain overlay for soft vintage texture */
-    body::after {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
-      opacity: 0.1;
-      z-index: 1;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(45deg, var(--pink), var(--purple), var(--blue));
+      background-size: 600% 600%;
+      animation: bgMove 30s ease infinite;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #333;
+    }
+
+    @keyframes bgMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
     }
 
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5em 2em;
-      max-width: 1000px;
-      margin: 2em auto 1em;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      position: relative;
-      z-index: 2;
+      background: var(--yellow);
+      padding: 1em;
+      border-bottom: 4px dotted var(--border);
+      text-align: center;
     }
-    .site-title {
-      font-size: 1.6em;
-      font-weight: bold;
-      color: var(--dark-text);
+
+    header h1 {
+      font-size: 2.5em;
+      color: var(--border);
+      text-shadow: 2px 2px white;
     }
-    .site-title a {
-      text-decoration: none;
-      color: var(--dark-text);
-      transition: color 0.3s ease;
-    }
-    .site-title a:hover {
-      color: var(--carnation-pink);
-    }
+
     nav {
       display: flex;
-      gap: 1.5em;
+      justify-content: center;
+      gap: 1em;
+      margin-top: 1em;
     }
+
     nav a {
       text-decoration: none;
-      color: var(--dark-text);
+      background: white;
+      padding: 0.5em 1em;
+      border: 2px dashed var(--border);
+      border-radius: 8px;
+      color: var(--border);
       font-weight: bold;
-      transition: color 0.3s ease;
     }
+
     nav a:hover {
-      color: var(--fairy-tale);
+      background: var(--border);
+      color: white;
     }
+
     main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2em;
-      display: flex;
-      flex-direction: column;
-      gap: 4em;
-      position: relative;
-      z-index: 2;
-    }
-    section {
+      max-width: 800px;
+      margin: 2em auto;
       background: white;
       padding: 2em;
-      border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      opacity: 0;
-      transform: translateY(30px);
+      border: 3px double var(--border);
+      border-radius: 16px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+
     h2 {
-      margin-top: 0;
-      font-size: 2em;
-      color: var(--fairy-tale);
+      color: var(--border);
+      margin-bottom: 1em;
     }
+
     .gallery {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5em;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1em;
     }
-    .gallery img,
-    .gallery iframe {
+
+    .gallery img, .gallery iframe {
       width: 100%;
-      border-radius: 10px;
-      object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border: 4px groove var(--purple);
+      border-radius: 12px;
     }
-    .contact-content {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75em;
-    }
-    .contact-content p {
-      font-size: 1.1em;
-    }
-    .contact-content a {
-      color: var(--uranian-blue);
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .contact-content a:hover {
-      color: var(--fairy-tale);
-    }
+
     footer {
       text-align: center;
-      padding: 2em;
-      background: var(--light-sky-blue);
-      color: #333;
+      background: var(--yellow);
+      padding: 1em;
       font-size: 0.9em;
-      position: relative;
-      z-index: 2;
-    }
-    .bubbles {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      overflow: hidden;
-    }
-    .bubble {
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      opacity: 0.3;
-      animation: floaty 16s infinite ease-in-out;
-    }
-    .bubble:nth-child(1) { background: var(--carnation-pink); top: 80%; left: 10%; animation-delay: 0s; }
-    .bubble:nth-child(2) { background: var(--fairy-tale); top: 70%; left: 30%; animation-delay: 3s; }
-    .bubble:nth-child(3) { background: var(--uranian-blue); top: 60%; left: 60%; animation-delay: 6s; }
-    .bubble:nth-child(4) { background: var(--light-sky-blue); top: 90%; left: 80%; animation-delay: 9s; }
-
-    @keyframes floaty {
-      0% { transform: translateY(0) scale(1); }
-      25% { transform: translateY(-30px) scale(1.1); }
-      50% { transform: translateY(-60px) scale(0.95); }
-      75% { transform: translateY(-30px) scale(1.05); }
-      100% { transform: translateY(0) scale(1); }
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav {
-        margin-top: 1em;
-        flex-wrap: wrap;
-        gap: 1em;
-      }
+      border-top: 4px dotted var(--border);
     }
   </style>
 </head>
 <body>
-  <div class="bubbles">
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-  </div>
-
   <header>
-    <div class="site-title">
-      <a href="/">Lianet Rodriguez</a>
-    </div>
+    <h1>Lianet Rodriguez</h1>
     <nav>
       <a href="#about">About</a>
       <a href="video-work.html">Video Work</a>
@@ -225,38 +132,20 @@
     <section id="video">
       <h2>Video Work (Preview)</h2>
       <div class="gallery">
-        <iframe src="https://www.youtube.com/embed/EsO0M8uTfdw?start=77" title="Film Title Placeholder" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/EsO0M8uTfdw?start=77" title="Film Title Placeholder" frameborder="0" allowfullscreen></iframe>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <div class="contact-content">
-        <p>Feel free to reach out to me for collaborations, commissions, or just to say hi!</p>
-        <p>Email: <a href="mailto:lianetik96@gmail.com">lianetik96@gmail.com</a></p>
-        <p>Instagram: <a href="https://instagram.com/pastelprizm" target="_blank">@pastelprizm</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/lianetrodriguez" target="_blank">Lianet Rodriguez</a></p>
-      </div>
+      <p>Email: <a href="mailto:lianetik96@gmail.com">lianetik96@gmail.com</a></p>
+      <p>Instagram: <a href="https://instagram.com/pastelprizm" target="_blank">@pastelprizm</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/lianetrodriguez" target="_blank">Lianet Rodriguez</a></p>
     </section>
   </main>
 
   <footer>
     &copy; 2025 Lianet Rodriguez. All rights reserved.
   </footer>
-
-  <script>
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  </script>
 </body>
 </html>
