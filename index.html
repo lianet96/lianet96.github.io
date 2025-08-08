@@ -5,31 +5,43 @@
   <title>Lianet Rodriguez | Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    :root {
+      --thistle: #cdb4dbff;
+      --fairy-tale: #ffc8ddff;
+      --carnation-pink: #ffafccff;
+      --uranian-blue: #bde0feff;
+      --light-sky-blue: #a2d2ffff;
+    }
+
     body {
       margin: 0;
       padding: 0;
-      background-color: #0f0f0f;
-      color: #f2f2f2;
+      background-color: var(--thistle);
+      color: #1a1a1a;
       font-family: 'Georgia', serif;
+      scroll-behavior: smooth;
     }
     header {
-      padding: 1em 2em;
-      background: #1a1a1a;
+      padding: 2em;
+      background: var(--fairy-tale);
       text-align: center;
     }
     header h1 {
       margin: 0;
-      font-size: 2em;
+      font-size: 2.5em;
     }
     nav {
       display: flex;
       justify-content: center;
       gap: 2em;
       padding: 1em;
-      background-color: #141414;
+      background-color: var(--carnation-pink);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav a {
-      color: #f9c7c7;
+      color: #1a1a1a;
       text-decoration: none;
       font-weight: bold;
     }
@@ -37,25 +49,26 @@
       text-decoration: underline;
     }
     section {
-      padding: 2em;
+      padding: 4em 2em;
       max-width: 960px;
       margin: 0 auto;
     }
     .video, .illustration {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.5em;
+      gap: 2em;
     }
     iframe, img {
       width: 100%;
       border-radius: 0.5em;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     footer {
       text-align: center;
       padding: 2em;
       font-size: 0.9em;
-      background: #1a1a1a;
-      color: #aaa;
+      background: var(--light-sky-blue);
+      color: #333;
     }
   </style>
 </head>
@@ -71,27 +84,28 @@
     <a href="mailto:lianetik96@gmail.com">Contact</a>
   </nav>
 
-  <section id="video">
-    <h2>Video Work</h2>
-    <div class="video">
-      <!-- Example YouTube embed -->
-      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Your Film Title" frameborder="0" allowfullscreen></iframe>
-      <!-- Add more <iframe> as needed -->
-    </div>
-  </section>
+  <main>
+    <section id="video">
+      <h2>Video Work</h2>
+      <div class="video">
+        <!-- Example YouTube embed -->
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Your Film Title" frameborder="0" allowfullscreen></iframe>
+        <!-- Add more <iframe> as needed -->
+      </div>
+    </section>
 
-  <section id="illustration">
-    <h2>Illustration Work</h2>
-    <div class="illustration">
-      <img src="media/illustration1.jpg" alt="Illustration 1">
-      <img src="media/illustration2.jpg" alt="Illustration 2">
-      <!-- Add more <img> tags as needed -->
-    </div>
-  </section>
+    <section id="illustration">
+      <h2>Illustration Work</h2>
+      <div class="illustration">
+        <img src="media/illustration1.jpg" alt="Illustration 1">
+        <img src="media/illustration2.jpg" alt="Illustration 2">
+        <!-- Add more <img> tags as needed -->
+      </div>
+    </section>
+  </main>
 
   <footer>
     &copy; 2025 Lianet Rodriguez. All rights reserved.
   </footer>
 </body>
 </html>
-
