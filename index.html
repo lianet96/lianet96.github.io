@@ -1,85 +1,109 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome | Lianet Rodriguez</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lianet Rodriguez | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
   <style>
     :root {
-      --thistle: #cdb4db;
-      --fairy-tale: #ffc8dd;
-      --carnation-pink: #ffafcc;
-      --uranian-blue: #bde0fe;
-      --light-sky-blue: #a2d2ff;
-      --dark-text: #1a1a1a;
+      --pink: #ffafd0;
+      --lavender: #e6ccff;
+      --bubble-blue: #c3e0ff;
+      --mint: #d4f5dc;
+      --bg: #fff0f5;
+      --dark: #2e2e2e;
     }
 
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+      cursor: url('https://cur.cursors-4u.net/smilies/smi-2/smi187.cur'), auto;
     }
 
     body {
-      background: linear-gradient(120deg, var(--thistle), var(--fairy-tale), var(--carnation-pink), var(--uranian-blue), var(--light-sky-blue));
-      background-size: 400% 400%;
-      animation: gradientShift 20s ease infinite;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: 'DM Serif Display', serif;
-      color: var(--dark-text);
-      position: relative;
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, var(--lavender), var(--mint), var(--bubble-blue));
+      background-size: 600% 600%;
+      animation: bgShift 30s ease infinite;
+      color: var(--dark);
     }
 
-    .grain-overlay {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('media/grain.png');
-      opacity: 0.07;
-      z-index: 2;
-      pointer-events: none;
-    }
-
-    .welcome-container {
+    header {
       text-align: center;
-      background: rgba(255, 255, 255, 0.85);
-      padding: 3em;
-      border-radius: 20px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-      z-index: 3;
+      padding: 2em 1em;
+      background: var(--pink);
+      border-bottom: 6px dotted white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    h1 {
+    .site-title {
       font-size: 3em;
-      margin-bottom: 0.5em;
-    }
-
-    p {
-      font-size: 1.2em;
-      margin-bottom: 1.5em;
-    }
-
-    a.enter-button {
-      text-decoration: none;
-      padding: 0.8em 2em;
-      background: var(--carnation-pink);
       color: white;
+      text-shadow: 2px 2px #00000020;
+    }
+
+    nav {
+      margin-top: 1em;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      background: var(--lavender);
+      padding: 0.6em 1.2em;
+      margin: 0 0.3em;
+      border-radius: 10px;
+      border: 2px dashed white;
       font-weight: bold;
-      border-radius: 8px;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
     }
 
-    a.enter-button:hover {
-      background: var(--fairy-tale);
+    nav a:hover {
+      background: white;
+      color: var(--pink);
     }
 
-    @keyframes gradientShift {
+    main {
+      padding: 3em 1.5em;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    section {
+      background: white;
+      padding: 2em;
+      margin-bottom: 2em;
+      border: 4px double var(--lavender);
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      font-size: 2em;
+      color: var(--pink);
+      text-shadow: 1px 1px #ffffffaa;
+    }
+
+    .gallery img,
+    .gallery iframe {
+      width: 100%;
+      margin-top: 1em;
+      border-radius: 12px;
+      border: 3px dotted var(--mint);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em;
+      font-size: 0.9em;
+      background: var(--pink);
+      color: white;
+      border-top: 6px dotted white;
+    }
+
+    @keyframes bgShift {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
@@ -87,16 +111,48 @@
   </style>
 </head>
 <body>
-  <div class="grain-overlay"></div>
-  <div class="welcome-container">
-    <h1>Welcome</h1>
-    <p>Enter the creative world of Lianet Rodriguez — film, illustration, and visual storytelling.</p>
-    <a href="portfolio.html" class="enter-button">Enter Portfolio</a>
-  </div>
-  <script>
-    setTimeout(() => {
-      window.location.href = 'portfolio.html';
-    }, 6000);
-  </script>
+  <header>
+    <div class="site-title">Lianet Rodriguez</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="video-work.html">Video Work</a>
+      <a href="illustration-work.html">Illustration Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi! I’m Lianet, and this is my sparkly digital corner! ✨ I’m a filmmaker, illustrator, and aesthetic addict making art that feels like a warm nostalgic hug. Dive in and see what I’ve been up to 💾💖</p>
+    </section>
+
+    <section id="illustration">
+      <h2>Illustration Work</h2>
+      <div class="gallery">
+        <img src="media/illustration1.jpg" alt="Illustration 1">
+        <img src="media/illustration2.jpg" alt="Illustration 2">
+      </div>
+    </section>
+
+    <section id="video">
+      <h2>Video Work</h2>
+      <div class="gallery">
+        <iframe src="https://www.youtube.com/embed/EsO0M8uTfdw?start=77" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Let’s Connect!</h2>
+      <p>Email: <a href="mailto:lianetik96@gmail.com">lianetik96@gmail.com</a></p>
+      <p>Instagram: <a href="https://instagram.com/pastelprizm" target="_blank">@pastelprizm</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/lianetrodriguez" target="_blank">Lianet Rodriguez</a></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Made with love + glitter by Lianet 💖
+  </footer>
 </body>
 </html>
+
