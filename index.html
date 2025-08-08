@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome | Lianet Rodriguez</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lianet Rodriguez | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -16,61 +16,223 @@
     }
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
     body {
-      background: linear-gradient(120deg, var(--thistle), var(--fairy-tale), var(--carnation-pink), var(--uranian-blue), var(--light-sky-blue));
-      background-size: 400% 400%;
-      animation: gradientShift 20s ease infinite;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      margin: 0;
+      padding: 0;
+      background: var(--thistle);
+      color: var(--dark-text);
       font-family: 'DM Serif Display', serif;
+      overflow-x: hidden;
+      position: relative;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5em 2em;
+      max-width: 1000px;
+      margin: 2em auto 1em;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .site-title {
+      font-size: 1.6em;
+      font-weight: bold;
       color: var(--dark-text);
     }
-    .welcome-container {
-      text-align: center;
-      background: rgba(255, 255, 255, 0.85);
-      padding: 3em;
-      border-radius: 20px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 0.5em;
-    }
-    p {
-      font-size: 1.2em;
-      margin-bottom: 1.5em;
-    }
-    a.enter-button {
+    .site-title a {
       text-decoration: none;
-      padding: 0.8em 2em;
-      background: var(--carnation-pink);
-      color: white;
+      color: var(--dark-text);
+      transition: color 0.3s ease;
+    }
+    .site-title a:hover {
+      color: var(--carnation-pink);
+    }
+    nav {
+      display: flex;
+      gap: 1.5em;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--dark-text);
       font-weight: bold;
-      border-radius: 8px;
-      transition: background 0.3s ease;
+      transition: color 0.3s ease;
     }
-    a.enter-button:hover {
-      background: var(--fairy-tale);
+    nav a:hover {
+      color: var(--fairy-tale);
     }
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 4em;
+    }
+    section {
+      background: white;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 2em;
+      color: var(--fairy-tale);
+    }
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+    }
+    .gallery img,
+    .gallery iframe {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .contact-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75em;
+    }
+    .contact-content p {
+      font-size: 1.1em;
+    }
+    .contact-content a {
+      color: var(--uranian-blue);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .contact-content a:hover {
+      color: var(--fairy-tale);
+    }
+    footer {
+      text-align: center;
+      padding: 2em;
+      background: var(--light-sky-blue);
+      color: #333;
+      font-size: 0.9em;
+    }
+    .bubbles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .bubble {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      opacity: 0.2;
+      animation: float 20s infinite ease-in-out;
+    }
+    .bubble:nth-child(1) { background: var(--carnation-pink); top: 10%; left: 20%; animation-delay: 0s; }
+    .bubble:nth-child(2) { background: var(--fairy-tale); top: 40%; left: 70%; animation-delay: 5s; }
+    .bubble:nth-child(3) { background: var(--uranian-blue); top: 80%; left: 10%; animation-delay: 10s; }
+    .bubble:nth-child(4) { background: var(--light-sky-blue); top: 50%; left: 50%; animation-delay: 15s; }
+    @keyframes float {
+      0% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-40px) scale(1.2); }
+      100% { transform: translateY(0) scale(1); }
+    }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 1em;
+        flex-wrap: wrap;
+        gap: 1em;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="welcome-container">
-    <h1>Welcome</h1>
-    <p>Enter the creative world of Lianet Rodriguez — film, illustration, and visual storytelling.</p>
-    <a href="index.html" class="enter-button">Enter Portfolio</a>
+  <div class="bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
   </div>
+
+  <header>
+    <div class="site-title">
+      <a href="/">Lianet Rodriguez</a>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="video-work.html">Video Work</a>
+      <a href="illustration-work.html">Illustration Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm Lianet Rodriguez, a filmmaker and visual artist based in Miami. I create short films, illustrations, and experimental art that explore culture, identity, and the surreal beauty of the everyday. I’m currently building my portfolio and would love to collaborate or connect. Feel free to reach out!</p>
+    </section>
+
+    <section id="illustration">
+      <h2>Illustration Work (Preview)</h2>
+      <div class="gallery">
+        <img src="media/illustration1.jpg" alt="Illustration 1">
+        <img src="media/illustration2.jpg" alt="Illustration 2">
+      </div>
+    </section>
+
+    <section id="video">
+      <h2>Video Work (Preview)</h2>
+      <div class="gallery">
+        <iframe src="https://www.youtube.com/embed/EsO0M8uTfdw?start=77" title="Film Title Placeholder" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-content">
+        <p>Feel free to reach out to me for collaborations, commissions, or just to say hi!</p>
+        <p>Email: <a href="mailto:lianetik96@gmail.com">lianetik96@gmail.com</a></p>
+        <p>Instagram: <a href="https://instagram.com/pastelprizm" target="_blank">@pastelprizm</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/lianetrodriguez" target="_blank">Lianet Rodriguez</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Lianet Rodriguez. All rights reserved.
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
-
 
