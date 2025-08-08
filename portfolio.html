@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio site for filmmaker and artist Lianet Rodriguez.">
+  <link rel="icon" type="image/png" href="media/favicon.png" />
   <title>Lianet Rodriguez | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
   <style>
@@ -101,6 +103,10 @@
       object-fit: cover;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
+    .gallery iframe {
+      aspect-ratio: 16 / 9;
+      height: auto;
+    }
     .contact-content {
       display: flex;
       flex-direction: column;
@@ -145,11 +151,13 @@
     .bubble:nth-child(2) { background: var(--fairy-tale); top: 40%; left: 70%; animation-delay: 5s; }
     .bubble:nth-child(3) { background: var(--uranian-blue); top: 80%; left: 10%; animation-delay: 10s; }
     .bubble:nth-child(4) { background: var(--light-sky-blue); top: 50%; left: 50%; animation-delay: 15s; }
+
     @keyframes float {
       0% { transform: translateY(0) scale(1); }
       50% { transform: translateY(-40px) scale(1.2); }
       100% { transform: translateY(0) scale(1); }
     }
+
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -192,15 +200,15 @@
     <section id="illustration">
       <h2>Illustration Work (Preview)</h2>
       <div class="gallery">
-        <img src="media/illustration1.jpg" alt="Illustration 1">
-        <img src="media/illustration2.jpg" alt="Illustration 2">
+        <img src="media/illustration1.jpg" alt="Surreal illustration of a dreamlike scene">
+        <img src="media/illustration2.jpg" alt="Illustration featuring vibrant colors and symbolism">
       </div>
     </section>
 
     <section id="video">
       <h2>Video Work (Preview)</h2>
       <div class="gallery">
-        <iframe src="https://www.youtube.com/embed/EsO0M8uTfdw?start=77" title="Film Title Placeholder" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/EsO0M8uTfdw?start=77" title="Haunted Hours film preview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </section>
 
