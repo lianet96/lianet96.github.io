@@ -25,6 +25,22 @@
       overflow-x: hidden;
       position: relative;
     }
+    .animated-gradient {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      background: linear-gradient(120deg, var(--thistle), var(--fairy-tale), var(--carnation-pink), var(--uranian-blue), var(--light-sky-blue));
+      background-size: 500% 500%;
+      animation: gradientShift 30s ease infinite;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
     header {
       display: flex;
       justify-content: space-between;
@@ -98,6 +114,11 @@
       object-fit: cover;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
+    .gallery img:hover,
+    .gallery iframe:hover {
+      box-shadow: 0 0 20px rgba(255, 200, 221, 0.4);
+      transform: scale(1.01);
+    }
     footer {
       text-align: center;
       padding: 2em;
@@ -141,21 +162,11 @@
         flex-wrap: wrap;
         gap: 1em;
       }
-      .animated-gradient {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -2;
-  background: linear-gradient(120deg, var(--thistle), var(--fairy-tale), var(--carnation-pink), var(--uranian-blue), var(--light-sky-blue));
-  background-size: 500% 500%;
-  animation: gradientShift 30s ease infinite;
-}
     }
   </style>
 </head>
 <body>
+  <div class="animated-gradient"></div>
   <div class="bubbles">
     <div class="bubble"></div>
     <div class="bubble"></div>
@@ -187,18 +198,18 @@
       </div>
     </section>
 
-<section id="video">
-  <h2>Video Work</h2>
-  <div class="gallery">
-    <iframe
-      src="https://www.youtube.com/embed/EsO0M8uTfdw?start=77"
-      title="Film Title Placeholder"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
+    <section id="video">
+      <h2>Video Work</h2>
+      <div class="gallery">
+        <iframe
+          src="https://www.youtube.com/embed/EsO0M8uTfdw?start=77"
+          title="Film Title Placeholder"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
   </main>
 
   <footer>
