@@ -1,112 +1,191 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lianet Rodriguez | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
   <style>
     :root {
-      --pink: #ffc0cb;
-      --purple: #dda0dd;
-      --blue: #add8e6;
-      --yellow: #fffacd;
-      --border: #ff69b4;
+      --thistle: #cdb4dbff;
+      --fairy-tale: #ffc8ddff;
+      --carnation-pink: #ffafccff;
+      --uranian-blue: #bde0feff;
+      --light-sky-blue: #a2d2ffff;
+      --dark-text: #1a1a1a;
     }
-
     * {
       box-sizing: border-box;
+    }
+    body {
       margin: 0;
       padding: 0;
+      background: var(--thistle);
+      color: var(--dark-text);
+      font-family: 'DM Serif Display', serif;
+      overflow-x: hidden;
+      cursor: url('https://cur.cursors-4u.net/smilies/smi-2/smi176.cur'), auto;
+      background-image: url("https://www.transparenttextures.com/patterns/cream-dust.png");
     }
-
-    body {
-      background: linear-gradient(45deg, var(--pink), var(--purple), var(--blue));
-      background-size: 600% 600%;
-      animation: bgMove 30s ease infinite;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      color: #333;
-    }
-
-    @keyframes bgMove {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-
     header {
-      background: var(--yellow);
-      padding: 1em;
-      border-bottom: 4px dotted var(--border);
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5em 2em;
+      max-width: 1000px;
+      margin: 2em auto 1em;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-
-    header h1 {
-      font-size: 2.5em;
-      color: var(--border);
-      text-shadow: 2px 2px white;
+    .site-title {
+      font-size: 1.6em;
+      font-weight: bold;
+      color: var(--dark-text);
     }
-
+    .site-title a {
+      text-decoration: none;
+      color: var(--dark-text);
+      transition: color 0.3s ease;
+    }
+    .site-title a:hover {
+      color: var(--carnation-pink);
+    }
     nav {
       display: flex;
-      justify-content: center;
-      gap: 1em;
-      margin-top: 1em;
+      gap: 1.5em;
     }
-
     nav a {
       text-decoration: none;
-      background: white;
-      padding: 0.5em 1em;
-      border: 2px dashed var(--border);
-      border-radius: 8px;
-      color: var(--border);
+      color: var(--dark-text);
       font-weight: bold;
+      transition: color 0.3s ease;
     }
-
     nav a:hover {
-      background: var(--border);
-      color: white;
+      color: var(--fairy-tale);
     }
-
     main {
-      max-width: 800px;
-      margin: 2em auto;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 4em;
+    }
+    section {
       background: white;
       padding: 2em;
-      border: 3px double var(--border);
-      border-radius: 16px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      color: var(--border);
-      margin-bottom: 1em;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1em;
-    }
-
-    .gallery img, .gallery iframe {
-      width: 100%;
-      border: 4px groove var(--purple);
       border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
     }
-
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 2em;
+      color: var(--fairy-tale);
+    }
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+    }
+    .gallery img,
+    .gallery iframe {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .gallery figure {
+      margin: 0;
+      text-align: center;
+    }
+    .gallery figcaption {
+      font-style: italic;
+      font-size: 0.9em;
+      margin-top: 0.5em;
+    }
+    .contact-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75em;
+    }
+    .contact-content p {
+      font-size: 1.1em;
+    }
+    .contact-content a {
+      color: var(--uranian-blue);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .contact-content a:hover {
+      color: var(--fairy-tale);
+    }
     footer {
       text-align: center;
-      background: var(--yellow);
-      padding: 1em;
+      padding: 2em;
+      background: var(--light-sky-blue);
+      color: #333;
       font-size: 0.9em;
-      border-top: 4px dotted var(--border);
+    }
+    .bubbles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .bubble {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      opacity: 0.25;
+      animation: float 10s infinite ease-in-out;
+    }
+    .bubble:nth-child(1) { background: var(--carnation-pink); top: 20%; left: 15%; animation-delay: 0s; }
+    .bubble:nth-child(2) { background: var(--fairy-tale); top: 60%; left: 65%; animation-delay: 3s; }
+    .bubble:nth-child(3) { background: var(--uranian-blue); top: 80%; left: 30%; animation-delay: 5s; }
+    .bubble:nth-child(4) { background: var(--light-sky-blue); top: 45%; left: 80%; animation-delay: 7s; }
+    @keyframes float {
+      0% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-50px) scale(1.3); }
+      100% { transform: translateY(0) scale(1); }
+    }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 1em;
+        flex-wrap: wrap;
+        gap: 1em;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+
   <header>
-    <h1>Lianet Rodriguez</h1>
+    <div class="site-title">
+      <a href="/">Lianet Rodriguez</a>
+    </div>
     <nav>
       <a href="#about">About</a>
       <a href="video-work.html">Video Work</a>
@@ -122,30 +201,53 @@
     </section>
 
     <section id="illustration">
-      <h2>Illustration Work (Preview)</h2>
+      <h2>Illustration & 3D Work</h2>
       <div class="gallery">
         <img src="media/illustration1.jpg" alt="Illustration 1">
         <img src="media/illustration2.jpg" alt="Illustration 2">
+        <figure>
+          <img src="media/3d-still.jpg" alt="3D Still Rendered Art">
+          <figcaption>3D Still — Rendered Scene</figcaption>
+        </figure>
       </div>
     </section>
 
     <section id="video">
-      <h2>Video Work (Preview)</h2>
+      <h2>Video Work</h2>
       <div class="gallery">
-        <iframe src="https://www.youtube.com/embed/EsO0M8uTfdw?start=77" title="Film Title Placeholder" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/EsO0M8uTfdw?start=77" title="Film by Lianet Rodriguez" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:lianetik96@gmail.com">lianetik96@gmail.com</a></p>
-      <p>Instagram: <a href="https://instagram.com/pastelprizm" target="_blank">@pastelprizm</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/lianetrodriguez" target="_blank">Lianet Rodriguez</a></p>
+      <div class="contact-content">
+        <p>Feel free to reach out to me for collaborations, commissions, or just to say hi!</p>
+        <p>Email: <a href="mailto:lianetik96@gmail.com">lianetik96@gmail.com</a></p>
+        <p>Instagram: <a href="https://instagram.com/pastelprizm" target="_blank">@pastelprizm</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/lianetrodriguez" target="_blank">Lianet Rodriguez</a></p>
+      </div>
     </section>
   </main>
 
   <footer>
     &copy; 2025 Lianet Rodriguez. All rights reserved.
   </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
+
