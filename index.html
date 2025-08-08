@@ -13,9 +13,11 @@
       --uranian-blue: #bde0feff;
       --light-sky-blue: #a2d2ffff;
       --dark-text: #1a1a1a;
+      --white: #ffffff;
     }
     * {
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
     body {
       margin: 0;
@@ -26,34 +28,22 @@
       overflow-x: hidden;
       position: relative;
     }
-    .animated-gradient {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-      background: linear-gradient(120deg, var(--thistle), var(--fairy-tale), var(--carnation-pink), var(--uranian-blue), var(--light-sky-blue));
-      background-size: 500% 500%;
-      animation: gradientShift 30s ease infinite;
-    }
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
     header {
+      position: sticky;
+      top: 0;
+      background: var(--white);
+      z-index: 10;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1.5em 2em;
       max-width: 1000px;
       margin: 0 auto;
-      position: relative;
     }
     .site-title {
-      font-size: 1.8em;
-      font-weight: 600;
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6em;
+      font-weight: bold;
     }
     .site-title a {
       text-decoration: none;
@@ -85,7 +75,7 @@
       gap: 4em;
     }
     section {
-      background: white;
+      background: var(--white);
       padding: 2em;
       border-radius: 12px;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
@@ -101,6 +91,7 @@
       margin-top: 0;
       font-size: 2em;
       color: var(--fairy-tale);
+      font-family: 'DM Serif Display', serif;
     }
     .gallery {
       display: flex;
@@ -121,13 +112,22 @@
       color: #333;
       font-size: 0.9em;
     }
+    .social-icons {
+      margin-top: 1em;
+    }
+    .social-icons a {
+      margin: 0 0.5em;
+      text-decoration: none;
+      color: var(--dark-text);
+      font-size: 1.4em;
+    }
     .bubbles {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: -1;
+      z-index: -2;
       overflow: hidden;
     }
     .bubble {
@@ -135,17 +135,34 @@
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      opacity: 0.15;
+      opacity: 0.2;
       animation: float 20s infinite ease-in-out;
     }
     .bubble:nth-child(1) { background: var(--carnation-pink); top: 10%; left: 20%; animation-delay: 0s; }
     .bubble:nth-child(2) { background: var(--fairy-tale); top: 40%; left: 70%; animation-delay: 5s; }
     .bubble:nth-child(3) { background: var(--uranian-blue); top: 80%; left: 10%; animation-delay: 10s; }
     .bubble:nth-child(4) { background: var(--light-sky-blue); top: 50%; left: 50%; animation-delay: 15s; }
+
+    .animated-gradient {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -3;
+      background: linear-gradient(120deg, var(--thistle), var(--fairy-tale), var(--carnation-pink), var(--uranian-blue), var(--light-sky-blue));
+      background-size: 500% 500%;
+      animation: gradientShift 30s ease infinite;
+    }
     @keyframes float {
       0% { transform: translateY(0) scale(1); }
       50% { transform: translateY(-40px) scale(1.2); }
       100% { transform: translateY(0) scale(1); }
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
     @media (max-width: 768px) {
       header {
@@ -159,6 +176,7 @@
       }
     }
   </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="animated-gradient"></div>
@@ -168,20 +186,25 @@
     <div class="bubble"></div>
     <div class="bubble"></div>
   </div>
+
   <header>
     <div class="site-title">
       <a href="/">Lianet Rodriguez</a>
     </div>
     <nav>
       <a href="#about">About</a>
+      <a href="#illustration">Illustration</a>
+      <a href="#video">Video</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
+
   <main>
     <section id="about">
       <h2>About Me</h2>
       <p>Hello! I'm Lianet Rodriguez, a filmmaker and visual artist based in Miami. I create short films, illustrations, and experimental art that explore culture, identity, and the surreal beauty of the everyday. I’m currently building my portfolio and would love to collaborate or connect. Feel free to reach out!</p>
     </section>
+
     <section id="illustration">
       <h2>Illustration Work</h2>
       <div class="gallery">
@@ -189,22 +212,35 @@
         <img src="media/illustration2.jpg" alt="Illustration 2">
       </div>
     </section>
+
     <section id="video">
       <h2>Video Work</h2>
       <div class="gallery">
         <iframe
           src="https://www.youtube.com/embed/EsO0M8uTfdw?start=77"
-          title="Film Reel"
+          title="Film Reel 2024"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
         </iframe>
       </div>
     </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Let's work together or just say hi: <a href="mailto:lianetik96@gmail.com">lianetik96@gmail.com</a></p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/pastelprizm" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@Pastelprizm" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://twitter.com/pastelprizm" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </section>
   </main>
+
   <footer>
     &copy; 2025 Lianet Rodriguez. All rights reserved.
   </footer>
+
   <script>
     const sections = document.querySelectorAll('section');
     const observer = new IntersectionObserver(entries => {
@@ -221,4 +257,3 @@
   </script>
 </body>
 </html>
-
