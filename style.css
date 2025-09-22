@@ -23,7 +23,17 @@ header h1 {
   font-size: 3rem;
   color: #b84a74; /* deep rosy pink */
 }
+/* Logo link */
+header h1 .logo {
+  text-decoration: none;
+  color: #b84a74;          /* deep rosy pink (default) */
+  transition: color 0.3s ease;
+}
 
+header h1 .logo:hover,
+header h1 .logo:focus-visible {
+  color: #d4af37;          /* gold on hover */
+}
 nav { margin-top: 15px; }
 
 nav a {
