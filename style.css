@@ -24,9 +24,12 @@ header h1 {
   color: #b84a74; /* deep rosy pink */
 }
 /* Logo link */
+/* Logo link */
 header h1 .logo {
-  text-decoration: none;
-  color: #b84a74;          /* deep rosy pink (default) */
+  text-decoration: none;   /* remove underline */
+  color: #b84a74;          /* deep rosy pink */
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
   transition: color 0.3s ease;
 }
 
