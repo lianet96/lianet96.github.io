@@ -209,8 +209,8 @@ footer {
   background: linear-gradient(135deg, #fff5f8 0%, #fde9f0 100%);
 }
 .portrait img {
-  width: 110%;
-  height: 110%;
+  width: 105%;
+  height: 105%;
   object-fit: cover;
   display: block;
 }
