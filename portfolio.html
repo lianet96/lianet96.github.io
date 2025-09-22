@@ -11,61 +11,124 @@
 </head>
 <body>
   <header>
-<h1><a href="index.html" class="logo">Lianet Rodriguez</a></h1>
+    <h1><a href="index.html" class="logo">Lianet Rodriguez</a></h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="portfolio.html">Portfolio</a>
-      <a href="about.html">About</a> <!-- fixed -->
-      <a href="mailto:lianetik96@gmail.com">Contact</a> <!-- fixed -->
+      <a href="about.html">About</a>
+      <a href="mailto:lianetik96@gmail.com">Contact</a>
     </nav>
   </header>
 
   <main class="container">
     <h2 class="section-title">Selected Works</h2>
-
-    <!-- Optional luxe divider -->
     <div class="divider"></div>
 
-    <section class="grid">
-      <!-- CARD 1 -->
-      <article class="card">
-        <a href="#" class="card-link">
-          <figure class="thumb">
-            <img src="images/work-01.jpg" alt="Project title thumbnail" loading="lazy">
-          </figure>
-          <div class="meta">
-            <h3>Haunted Hours</h3>
-            <p>Short film • 10 min • 2025</p>
-          </div>
-        </a>
-      </article>
+    <!-- Optional section subnav -->
+    <nav class="portfolio-subnav" aria-label="Portfolio sections">
+      <a href="#film">Film</a> •
+      <a href="#illustration">Illustration</a> •
+      <a href="#installations">Installations</a>
+    </nav>
 
-      <!-- CARD 2 -->
-      <article class="card">
-        <a href="#" class="card-link">
-          <figure class="thumb">
-            <img src="images/work-02.jpg" alt="Illustration series thumbnail" loading="lazy">
-          </figure>
-          <div class="meta">
-            <h3>Pena Íntima</h3>
-            <p>Installation • 2024 • Chroma Art Film Festival</p>
-          </div>
-        </a>
-      </article>
+    <!-- ===== Film (Video Work) ===== -->
+    <section id="film" class="video-section">
+      <h2 class="section-title">Film</h2>
+      <div class="divider"></div>
 
-      <!-- CARD 3 -->
-      <article class="card">
-        <a href="#" class="card-link">
-          <figure class="thumb">
-            <img src="images/work-03.jpg" alt="Concept art thumbnail" loading="lazy">
-          </figure>
-          <div class="meta">
-            <h3>Acceptance</h3>
-            <p>Live-action short • Official Selection</p>
+      <div class="video-grid">
+
+        <!-- Vimeo (cleanest look) -->
+        <article class="video-card">
+          <div class="embed">
+            <iframe
+              src="https://player.vimeo.com/video/VIDEO_ID?byline=0&title=0&portrait=0&color=d4af37"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
           </div>
-        </a>
-      </article>
+          <div class="video-meta">
+            <h4>Acceptance (2025)</h4>
+            <p>Short film • 7 min • Official Selection</p>
+          </div>
+        </article>
+
+        <!-- YouTube with reduced branding -->
+        <article class="video-card">
+          <div class="embed">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/YOUTUBE_ID?rel=0&modestbranding=1&controls=1&color=white"
+              title="Haunted Hours (2025)"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
+          <div class="video-meta">
+            <h4>Haunted Hours (2025)</h4>
+            <p>Short film • 10 min</p>
+          </div>
+        </article>
+
+        <!-- Duplicate <article> blocks for more videos -->
+      </div>
     </section>
+
+    <!-- ===== Illustration (keep using your existing grid) ===== -->
+    <section id="illustration">
+      <h2 class="section-title">Illustration</h2>
+      <div class="divider"></div>
+
+      <section class="grid">
+        <!-- CARD 1 -->
+        <article class="card">
+          <a href="#" class="card-link">
+            <figure class="thumb">
+              <img src="images/work-01.jpg" alt="Project title thumbnail" loading="lazy">
+            </figure>
+            <div class="meta">
+              <h3>Haunted Hours Poster</h3>
+              <p>Key art • 2025</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="card">
+          <a href="#" class="card-link">
+            <figure class="thumb">
+              <img src="images/work-02.jpg" alt="Illustration series thumbnail" loading="lazy">
+            </figure>
+            <div class="meta">
+              <h3>Pena Íntima Sketches</h3>
+              <p>Sketchbook • 2024</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="card">
+          <a href="#" class="card-link">
+            <figure class="thumb">
+              <img src="images/work-03.jpg" alt="Concept art thumbnail" loading="lazy">
+            </figure>
+            <div class="meta">
+              <h3>Acceptance Concept</h3>
+              <p>Visual development • 2025</p>
+            </div>
+          </a>
+        </article>
+      </section>
+    </section>
+
+    <!-- ===== Installations / Mixed Media (optional) ===== -->
+    <section id="installations" class="video-section">
+      <h2 class="section-title">Installations</h2>
+      <div class="divider"></div>
+      <p style="color:#6b5d64;">Coming soon.</p>
+    </section>
+
   </main>
 
   <footer>
