@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<h1><a href="index.html" class="logo">Lianet Rodriguez</a></h1>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – Lianet Rodriguez</title>
 
   <!-- Fonts + Styles -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-   <h1><a href="index.html" class="logo">Lianet Rodriguez</a></h1>
+    <h1><a href="index.html" class="logo">Lianet Rodriguez</a></h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="portfolio.html">Portfolio</a>
@@ -23,15 +23,15 @@
   <main class="container about">
     <section class="about-card">
       <figure class="portrait">
-        <img src="Untitled_Artwork.jpg" alt="Illustrated portrait of Lianet flashing a peace sign">
+        <!-- Image is in the repo root, so no folder prefix -->
+        <img src="Untitled_Artwork.jpg" alt="Illustrated portrait of Lianet flashing a peace sign" />
       </figure>
 
       <div class="about-content">
         <h2 class="section-title">Hi, I’m Lianet</h2>
         <p>
           Cuban-American artist and filmmaker based in South Florida. My work blends tender, coquette aesthetics with
-          sharp storytelling—film, illustration, and installations that explore identity, memory, and the strange
-          poetry of everyday life.
+          sharp storytelling—film, illustration, and installations that explore identity, memory, and the strange poetry of everyday life.
         </p>
 
         <p>
@@ -48,7 +48,9 @@
 
         <div class="about-actions">
           <a class="btn" href="mailto:lianetik96@gmail.com">Email me</a>
-          <a class="btn btn-outline" href="my resume_sept_2025.pdf">Download Résumé</a>
+          <!-- Use the exact filename; opens in a new tab. Add 'download' if you want forced download. -->
+          <a class="btn btn-outline" href="my_resume_Sept_2025.pdf" target="_blank" rel="noopener">Download Résumé</a>
+          <!-- or: <a class="btn btn-outline" href="my_resume_Sept_2025.pdf" download>Download Résumé</a> -->
         </div>
 
         <div class="socials">
@@ -67,3 +69,4 @@
   </footer>
 </body>
 </html>
+
