@@ -362,4 +362,34 @@ footer {
   color: #d4af37;
   border-color: #d4af37;
 }
+/* Decorative flourish divider */
+.decorative-divider {
+  max-width: 200px;
+  margin: 0 auto 18px;
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #d4af37, transparent);
+  opacity: 0.7;
+  border-radius: 50px;
+  position: relative;
+}
+.decorative-divider::after {
+  content: "✦";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  color: #d4af37;
+}
+
+/* Artist statement */
+.artist-statement {
+  max-width: 720px;
+  margin: 0 auto 28px;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #6b5d64;
+  line-height: 1.6;
+}
 
