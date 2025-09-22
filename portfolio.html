@@ -1,253 +1,394 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lianet Rodriguez | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --thistle: #cdb4dbff;
-      --fairy-tale: #ffc8ddff;
-      --carnation-pink: #ffafccff;
-      --uranian-blue: #bde0feff;
-      --light-sky-blue: #a2d2ffff;
-      --dark-text: #1a1a1a;
-    }
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      background: var(--thistle);
-      color: var(--dark-text);
-      font-family: 'DM Serif Display', serif;
-      overflow-x: hidden;
-      cursor: url('https://cur.cursors-4u.net/smilies/smi-2/smi176.cur'), auto;
-      background-image: url("https://www.transparenttextures.com/patterns/cream-dust.png");
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5em 2em;
-      max-width: 1000px;
-      margin: 2em auto 1em;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    .site-title {
-      font-size: 1.6em;
-      font-weight: bold;
-      color: var(--dark-text);
-    }
-    .site-title a {
-      text-decoration: none;
-      color: var(--dark-text);
-      transition: color 0.3s ease;
-    }
-    .site-title a:hover {
-      color: var(--carnation-pink);
-    }
-    nav {
-      display: flex;
-      gap: 1.5em;
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--dark-text);
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: var(--fairy-tale);
-    }
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2em;
-      display: flex;
-      flex-direction: column;
-      gap: 4em;
-    }
-    section {
-      background: white;
-      padding: 2em;
-      border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    h2 {
-      margin-top: 0;
-      font-size: 2em;
-      color: var(--fairy-tale);
-    }
-    .gallery {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5em;
-    }
-    .gallery img,
-    .gallery iframe {
-      width: 100%;
-      border-radius: 10px;
-      object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    .gallery figure {
-      margin: 0;
-      text-align: center;
-    }
-    .gallery figcaption {
-      font-style: italic;
-      font-size: 0.9em;
-      margin-top: 0.5em;
-    }
-    .contact-content {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75em;
-    }
-    .contact-content p {
-      font-size: 1.1em;
-    }
-    .contact-content a {
-      color: var(--uranian-blue);
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .contact-content a:hover {
-      color: var(--fairy-tale);
-    }
-    footer {
-      text-align: center;
-      padding: 2em;
-      background: var(--light-sky-blue);
-      color: #333;
-      font-size: 0.9em;
-    }
-    .bubbles {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      overflow: hidden;
-      pointer-events: none;
-    }
-    .bubble {
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      opacity: 0.25;
-      animation: float 10s infinite ease-in-out;
-    }
-    .bubble:nth-child(1) { background: var(--carnation-pink); top: 20%; left: 15%; animation-delay: 0s; }
-    .bubble:nth-child(2) { background: var(--fairy-tale); top: 60%; left: 65%; animation-delay: 3s; }
-    .bubble:nth-child(3) { background: var(--uranian-blue); top: 80%; left: 30%; animation-delay: 5s; }
-    .bubble:nth-child(4) { background: var(--light-sky-blue); top: 45%; left: 80%; animation-delay: 7s; }
-    @keyframes float {
-      0% { transform: translateY(0) scale(1); }
-      50% { transform: translateY(-50px) scale(1.3); }
-      100% { transform: translateY(0) scale(1); }
-    }
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav {
-        margin-top: 1em;
-        flex-wrap: wrap;
-        gap: 1em;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="bubbles">
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-  </div>
-
-  <header>
-    <div class="site-title">
-      <a href="/">Lianet Rodriguez</a>
-    </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="video-work.html">Video Work</a>
-      <a href="illustration-work.html">Illustration Work</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hello! I'm Lianet Rodriguez, a filmmaker and visual artist based in Miami. I create short films, illustrations, and experimental art that explore culture, identity, and the surreal beauty of the everyday. I’m currently building my portfolio and would love to collaborate or connect. Feel free to reach out!</p>
-    </section>
-
-    <section id="illustration">
-      <h2>Illustration & 3D Work</h2>
-      <div class="gallery">
-        <img src="media/illustration1.jpg" alt="Illustration 1">
-        <img src="media/illustration2.jpg" alt="Illustration 2">
-        <figure>
-          <img src="media/3d-still.jpg" alt="3D Still Rendered Art">
-          <figcaption>3D Still — Rendered Scene</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section id="video">
-      <h2>Video Work</h2>
-      <div class="gallery">
-        <iframe src="https://www.youtube.com/embed/EsO0M8uTfdw?start=77" title="Film by Lianet Rodriguez" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="contact-content">
-        <p>Feel free to reach out to me for collaborations, commissions, or just to say hi!</p>
-        <p>Email: <a href="mailto:lianetik96@gmail.com">lianetik96@gmail.com</a></p>
-        <p>Instagram: <a href="https://instagram.com/pastelprizm" target="_blank">@pastelprizm</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/lianetrodriguez" target="_blank">Lianet Rodriguez</a></p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 Lianet Rodriguez. All rights reserved.
-  </footer>
-
-  <script>
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  </script>
-</body>
-</html>
-
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/portfolio.html b/portfolio.html
+index d2852024559b91a64cb25e6a02c4041cec2c9b81..aaaa7c396dcebe1765f3915f5fd33567eb8374ed 100644
+--- a/portfolio.html
++++ b/portfolio.html
+@@ -1,253 +1,163 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>Lianet Rodriguez | Portfolio</title>
+-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+-  <style>
+-    :root {
+-      --thistle: #cdb4dbff;
+-      --fairy-tale: #ffc8ddff;
+-      --carnation-pink: #ffafccff;
+-      --uranian-blue: #bde0feff;
+-      --light-sky-blue: #a2d2ffff;
+-      --dark-text: #1a1a1a;
+-    }
+-    * {
+-      box-sizing: border-box;
+-    }
+-    body {
+-      margin: 0;
+-      padding: 0;
+-      background: var(--thistle);
+-      color: var(--dark-text);
+-      font-family: 'DM Serif Display', serif;
+-      overflow-x: hidden;
+-      cursor: url('https://cur.cursors-4u.net/smilies/smi-2/smi176.cur'), auto;
+-      background-image: url("https://www.transparenttextures.com/patterns/cream-dust.png");
+-    }
+-    header {
+-      display: flex;
+-      justify-content: space-between;
+-      align-items: center;
+-      padding: 1.5em 2em;
+-      max-width: 1000px;
+-      margin: 2em auto 1em;
+-      background: white;
+-      border-radius: 16px;
+-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+-    }
+-    .site-title {
+-      font-size: 1.6em;
+-      font-weight: bold;
+-      color: var(--dark-text);
+-    }
+-    .site-title a {
+-      text-decoration: none;
+-      color: var(--dark-text);
+-      transition: color 0.3s ease;
+-    }
+-    .site-title a:hover {
+-      color: var(--carnation-pink);
+-    }
+-    nav {
+-      display: flex;
+-      gap: 1.5em;
+-    }
+-    nav a {
+-      text-decoration: none;
+-      color: var(--dark-text);
+-      font-weight: bold;
+-      transition: color 0.3s ease;
+-    }
+-    nav a:hover {
+-      color: var(--fairy-tale);
+-    }
+-    main {
+-      max-width: 900px;
+-      margin: 0 auto;
+-      padding: 2em;
+-      display: flex;
+-      flex-direction: column;
+-      gap: 4em;
+-    }
+-    section {
+-      background: white;
+-      padding: 2em;
+-      border-radius: 12px;
+-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+-      opacity: 0;
+-      transform: translateY(30px);
+-    }
+-    section.visible {
+-      opacity: 1;
+-      transform: translateY(0);
+-    }
+-    h2 {
+-      margin-top: 0;
+-      font-size: 2em;
+-      color: var(--fairy-tale);
+-    }
+-    .gallery {
+-      display: flex;
+-      flex-direction: column;
+-      gap: 1.5em;
+-    }
+-    .gallery img,
+-    .gallery iframe {
+-      width: 100%;
+-      border-radius: 10px;
+-      object-fit: cover;
+-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+-    }
+-    .gallery figure {
+-      margin: 0;
+-      text-align: center;
+-    }
+-    .gallery figcaption {
+-      font-style: italic;
+-      font-size: 0.9em;
+-      margin-top: 0.5em;
+-    }
+-    .contact-content {
+-      display: flex;
+-      flex-direction: column;
+-      gap: 0.75em;
+-    }
+-    .contact-content p {
+-      font-size: 1.1em;
+-    }
+-    .contact-content a {
+-      color: var(--uranian-blue);
+-      text-decoration: none;
+-      font-weight: bold;
+-    }
+-    .contact-content a:hover {
+-      color: var(--fairy-tale);
+-    }
+-    footer {
+-      text-align: center;
+-      padding: 2em;
+-      background: var(--light-sky-blue);
+-      color: #333;
+-      font-size: 0.9em;
+-    }
+-    .bubbles {
+-      position: fixed;
+-      top: 0;
+-      left: 0;
+-      width: 100%;
+-      height: 100%;
+-      z-index: -1;
+-      overflow: hidden;
+-      pointer-events: none;
+-    }
+-    .bubble {
+-      position: absolute;
+-      width: 60px;
+-      height: 60px;
+-      border-radius: 50%;
+-      opacity: 0.25;
+-      animation: float 10s infinite ease-in-out;
+-    }
+-    .bubble:nth-child(1) { background: var(--carnation-pink); top: 20%; left: 15%; animation-delay: 0s; }
+-    .bubble:nth-child(2) { background: var(--fairy-tale); top: 60%; left: 65%; animation-delay: 3s; }
+-    .bubble:nth-child(3) { background: var(--uranian-blue); top: 80%; left: 30%; animation-delay: 5s; }
+-    .bubble:nth-child(4) { background: var(--light-sky-blue); top: 45%; left: 80%; animation-delay: 7s; }
+-    @keyframes float {
+-      0% { transform: translateY(0) scale(1); }
+-      50% { transform: translateY(-50px) scale(1.3); }
+-      100% { transform: translateY(0) scale(1); }
+-    }
+-    @media (max-width: 768px) {
+-      header {
+-        flex-direction: column;
+-        align-items: flex-start;
+-      }
+-      nav {
+-        margin-top: 1em;
+-        flex-wrap: wrap;
+-        gap: 1em;
+-      }
+-    }
+-  </style>
++  <link rel="preconnect" href="https://fonts.googleapis.com">
++  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
++  <link rel="stylesheet" href="style.css" />
+ </head>
+-<body>
+-  <div class="bubbles">
+-    <div class="bubble"></div>
+-    <div class="bubble"></div>
+-    <div class="bubble"></div>
+-    <div class="bubble"></div>
+-  </div>
+-
+-  <header>
+-    <div class="site-title">
+-      <a href="/">Lianet Rodriguez</a>
++<body class="site site--portfolio">
++  <header class="site-header">
++    <div class="identity">
++      <a class="logo" href="/">LR</a>
++      <div class="identity__text">
++        <span class="identity__name">Lianet Rodriguez</span>
++        <span class="identity__role">Filmmaker &amp; Visual Artist</span>
++      </div>
+     </div>
+-    <nav>
++    <nav class="site-nav">
++      <a href="#hero">Overview</a>
++      <a href="#work">Selected Work</a>
+       <a href="#about">About</a>
+-      <a href="video-work.html">Video Work</a>
+-      <a href="illustration-work.html">Illustration Work</a>
++      <a href="#process">Approach</a>
+       <a href="#contact">Contact</a>
+     </nav>
++    <a class="button button-primary" href="mailto:lianetik96@gmail.com">Start a project</a>
+   </header>
+ 
+   <main>
+-    <section id="about">
+-      <h2>About Me</h2>
+-      <p>Hello! I'm Lianet Rodriguez, a filmmaker and visual artist based in Miami. I create short films, illustrations, and experimental art that explore culture, identity, and the surreal beauty of the everyday. I’m currently building my portfolio and would love to collaborate or connect. Feel free to reach out!</p>
++    <section id="hero" class="section hero animate-on-scroll">
++      <div class="hero__content">
++        <p class="hero__eyebrow">Portfolio 2025</p>
++        <h1>Visual narratives that honour nostalgia and community.</h1>
++        <p>I direct, illustrate, and design across mediums to build stories that feel intimate yet cinematic. From mood films to illustration series, every piece is grounded in colour theory, pacing, and thoughtful art direction.</p>
++        <div class="hero__actions">
++          <a class="button button-primary" href="#work">View selected work</a>
++          <a class="button" href="#contact">Let's collaborate</a>
++        </div>
++      </div>
++      <figure class="hero__media">
++        <img src="media/illustration1.jpg" alt="Collage of illustrations by Lianet Rodriguez" loading="lazy">
++        <figcaption>Mixed-media illustration combining analogue textures with digital gradients for a nostalgic finish.</figcaption>
++      </figure>
+     </section>
+ 
+-    <section id="illustration">
+-      <h2>Illustration & 3D Work</h2>
+-      <div class="gallery">
+-        <img src="media/illustration1.jpg" alt="Illustration 1">
+-        <img src="media/illustration2.jpg" alt="Illustration 2">
+-        <figure>
+-          <img src="media/3d-still.jpg" alt="3D Still Rendered Art">
+-          <figcaption>3D Still — Rendered Scene</figcaption>
+-        </figure>
++    <section id="work" class="section animate-on-scroll">
++      <h2>Selected Work</h2>
++      <p class="section-lead">Cross-disciplinary projects spanning film direction, editorial illustration, and 3D concepting.</p>
++      <div class="project-grid">
++        <article class="project-card animate-on-scroll">
++          <div class="project-card__media">
++            <div class="embed">
++              <iframe src="https://www.youtube.com/embed/EsO0M8uTfdw?start=77" title="Film by Lianet Rodriguez" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
++            </div>
++          </div>
++          <div class="project-card__body">
++            <h3>Film • <em>Daybreak Reverie</em></h3>
++            <p>A narrative short that weaves together portraiture, ambient audio, and Miami's twilight palette to capture small acts of joy.</p>
++            <ul class="tag-list">
++              <li>Direction &amp; cinematography</li>
++              <li>Colour grading</li>
++              <li>Adobe Premiere Pro</li>
++            </ul>
++          </div>
++        </article>
++
++        <article class="project-card animate-on-scroll">
++          <figure class="project-card__media">
++            <img src="media/illustration2.jpg" alt="Illustration of two figures surrounded by flowers" loading="lazy">
++          </figure>
++          <div class="project-card__body">
++            <h3>Illustration Series • <em>Pastel Prizm</em></h3>
++            <p>Editorial illustrations balancing softness and structure to communicate themes of identity, memory, and online intimacy.</p>
++            <ul class="tag-list">
++              <li>Digital illustration</li>
++              <li>Character design</li>
++              <li>Procreate &amp; Adobe Fresco</li>
++            </ul>
++          </div>
++        </article>
++
++        <article class="project-card animate-on-scroll">
++          <figure class="project-card__media">
++            <img src="media/3d-still.jpg" alt="3D still of an immersive set design" loading="lazy">
++          </figure>
++          <div class="project-card__body">
++            <h3>3D Concept • Immersive stage design</h3>
++            <p>Previsualisation renders guiding lighting cues, camera moves, and art direction for an experiential performance concept.</p>
++            <ul class="tag-list">
++              <li>Cinema 4D &amp; Octane</li>
++              <li>Lighting studies</li>
++              <li>Shot planning</li>
++            </ul>
++          </div>
++        </article>
+       </div>
+     </section>
+ 
+-    <section id="video">
+-      <h2>Video Work</h2>
+-      <div class="gallery">
+-        <iframe src="https://www.youtube.com/embed/EsO0M8uTfdw?start=77" title="Film by Lianet Rodriguez" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
++    <section id="about" class="section animate-on-scroll">
++      <h2>About</h2>
++      <p class="section-lead">I translate intangible feelings into colour-driven imagery for film, editorial, and digital experiences.</p>
++      <div class="split">
++        <div class="split__column">
++          <p>Based in Miami, I work across filmmaking, illustration, and motion design to build cohesive visual worlds. My practice is rooted in telling Latinx stories with warmth, balancing dreamy aesthetics with clear narratives.</p>
++          <p>I collaborate with musicians, community organisations, and small brands who value inclusive storytelling. Whether I am directing on set or sketching in Procreate, I prioritise research, collaboration, and thoughtful production planning.</p>
++        </div>
++        <div class="split__column">
++          <h3>Capabilities</h3>
++          <ul class="list--checked">
++            <li>Directing &amp; producing short-form film</li>
++            <li>Storyboarding and shot planning</li>
++            <li>Editorial &amp; campaign illustration</li>
++            <li>3D visualisation &amp; motion experiments</li>
++          </ul>
++        </div>
+       </div>
+     </section>
+ 
+-    <section id="contact">
+-      <h2>Contact</h2>
+-      <div class="contact-content">
+-        <p>Feel free to reach out to me for collaborations, commissions, or just to say hi!</p>
+-        <p>Email: <a href="mailto:lianetik96@gmail.com">lianetik96@gmail.com</a></p>
+-        <p>Instagram: <a href="https://instagram.com/pastelprizm" target="_blank">@pastelprizm</a></p>
+-        <p>LinkedIn: <a href="https://linkedin.com/in/lianetrodriguez" target="_blank">Lianet Rodriguez</a></p>
++    <section id="process" class="section animate-on-scroll">
++      <h2>Creative approach</h2>
++      <p class="section-lead">A collaborative process that keeps story, audience, and delivery top of mind.</p>
++      <ol class="process-list">
++        <li>
++          <h3>Discovery</h3>
++          <p>Align on themes, references, and goals through mood boards, interviews, and visual research to build a shared vocabulary.</p>
++        </li>
++        <li>
++          <h3>Visual development</h3>
++          <p>Create treatments, storyboards, and style frames that map pacing, palette, and composition before moving into production.</p>
++        </li>
++        <li>
++          <h3>Production &amp; delivery</h3>
++          <p>Direct, animate, or illustrate with iterative feedback loops, then deliver polished assets optimised for the intended platforms.</p>
++        </li>
++      </ol>
++    </section>
++
++    <section id="contact" class="section section--accent animate-on-scroll">
++      <h2>Let's build something memorable</h2>
++      <p class="section-lead">Tell me about your next film, illustration brief, or experiential idea and I'll craft a tailored proposal.</p>
++      <div class="contact-grid">
++        <div>
++          <p>Email: <a href="mailto:lianetik96@gmail.com">lianetik96@gmail.com</a></p>
++          <p>Instagram: <a href="https://instagram.com/pastelprizm" target="_blank" rel="noreferrer noopener">@pastelprizm</a></p>
++          <p>LinkedIn: <a href="https://linkedin.com/in/lianetrodriguez" target="_blank" rel="noreferrer noopener">Lianet Rodriguez</a></p>
++        </div>
++        <div class="contact-cta">
++          <p>Need direction, illustration, or visual development support? Share timelines, budget, and deliverables to get started.</p>
++          <a class="button button-inverse" href="mailto:lianetik96@gmail.com">Start a conversation</a>
++        </div>
+       </div>
+     </section>
+   </main>
+ 
+-  <footer>
++  <footer class="site-footer">
+     &copy; 2025 Lianet Rodriguez. All rights reserved.
+   </footer>
+ 
+-  <script>
+-    const sections = document.querySelectorAll('section');
+-    const observer = new IntersectionObserver(entries => {
+-      entries.forEach(entry => {
+-        if (entry.isIntersecting) {
+-          entry.target.classList.add('visible');
+-        }
+-      });
+-    }, { threshold: 0.1 });
+-
+-    sections.forEach(section => {
+-      observer.observe(section);
+-    });
+-  </script>
++  <script src="scripts/main.js" defer></script>
+ </body>
+ </html>
+-
+ 
+EOF
+)
