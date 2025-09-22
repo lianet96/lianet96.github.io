@@ -1,267 +1,30 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/index.html b/index.html
-index 16e2ae2741847a20d4f3ad0db9efd8ed12bc9944..239807066600ebfb3aa5855e92f0f0b6be959642 100644
---- a/index.html
-+++ b/index.html
-@@ -1,158 +1,124 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1" />
--  <title>Lianet Rodriguez | Portfolio</title>
--  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
--  <style>
--    :root {
--      --pink: #ffafd0;
--      --lavender: #e6ccff;
--      --bubble-blue: #c3e0ff;
--      --mint: #d4f5dc;
--      --bg: #fff0f5;
--      --dark: #2e2e2e;
--    }
--
--    * {
--      box-sizing: border-box;
--      cursor: url('https://cur.cursors-4u.net/smilies/smi-2/smi187.cur'), auto;
--    }
--
--    body {
--      margin: 0;
--      padding: 0;
--      font-family: 'Comic Sans MS', cursive, sans-serif;
--      background: linear-gradient(135deg, var(--lavender), var(--mint), var(--bubble-blue));
--      background-size: 600% 600%;
--      animation: bgShift 30s ease infinite;
--      color: var(--dark);
--    }
--
--    header {
--      text-align: center;
--      padding: 2em 1em;
--      background: var(--pink);
--      border-bottom: 6px dotted white;
--      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
--    }
--
--    .site-title {
--      font-size: 3em;
--      color: white;
--      text-shadow: 2px 2px #00000020;
--    }
--
--    nav {
--      margin-top: 1em;
--    }
--
--    nav a {
--      text-decoration: none;
--      color: white;
--      background: var(--lavender);
--      padding: 0.6em 1.2em;
--      margin: 0 0.3em;
--      border-radius: 10px;
--      border: 2px dashed white;
--      font-weight: bold;
--      transition: all 0.3s ease;
--    }
--
--    nav a:hover {
--      background: white;
--      color: var(--pink);
--    }
--
--    main {
--      padding: 3em 1.5em;
--      max-width: 1000px;
--      margin: 0 auto;
--    }
--
--    section {
--      background: white;
--      padding: 2em;
--      margin-bottom: 2em;
--      border: 4px double var(--lavender);
--      border-radius: 18px;
--      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
--    }
--
--    h2 {
--      font-size: 2em;
--      color: var(--pink);
--      text-shadow: 1px 1px #ffffffaa;
--    }
--
--    .gallery img,
--    .gallery iframe {
--      width: 100%;
--      margin-top: 1em;
--      border-radius: 12px;
--      border: 3px dotted var(--mint);
--    }
--
--    footer {
--      text-align: center;
--      padding: 2em;
--      font-size: 0.9em;
--      background: var(--pink);
--      color: white;
--      border-top: 6px dotted white;
--    }
--
--    @keyframes bgShift {
--      0% { background-position: 0% 50%; }
--      50% { background-position: 100% 50%; }
--      100% { background-position: 0% 50%; }
--    }
--  </style>
-+  <title>Lianet Rodriguez | Visual Artist & Filmmaker</title>
-+  <link rel="preconnect" href="https://fonts.googleapis.com">
-+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-+  <link rel="stylesheet" href="style.css" />
- </head>
--<body>
--  <header>
--    <div class="site-title">Lianet Rodriguez</div>
--    <nav>
--      <a href="#about">About</a>
--      <a href="video-work.html">Video Work</a>
--      <a href="illustration-work.html">Illustration Work</a>
-+<body class="site site--landing">
-+  <header class="site-header">
-+    <div class="identity">
-+      <a class="logo" href="/">LR</a>
-+      <div class="identity__text">
-+        <span class="identity__name">Lianet Rodriguez</span>
-+        <span class="identity__role">Filmmaker &amp; Visual Artist</span>
-+      </div>
-+    </div>
-+    <nav class="site-nav">
-+      <a href="#work">Highlights</a>
-+      <a href="portfolio.html">Portfolio</a>
-       <a href="#contact">Contact</a>
-     </nav>
-+    <a class="button button-primary" href="portfolio.html">View full portfolio</a>
-   </header>
- 
-   <main>
--    <section id="about">
--      <h2>About Me</h2>
--      <p>Hi! I’m Lianet, and this is my sparkly digital corner! ✨ I’m a filmmaker, illustrator, and aesthetic addict making art that feels like a warm nostalgic hug. Dive in and see what I’ve been up to 💾💖</p>
-+    <section id="hero" class="section hero animate-on-scroll">
-+      <div class="hero__content">
-+        <p class="hero__eyebrow">Creative direction &amp; storytelling</p>
-+        <h1>Colour-rich films and illustrations with editorial polish.</h1>
-+        <p>I craft narrative shorts, dreamy illustrations, and 3D mood pieces that celebrate culture, nostalgia, and community. Each project blends art direction with purposeful storytelling so your audience feels the emotion behind every frame.</p>
-+        <div class="hero__actions">
-+          <a class="button button-primary" href="portfolio.html">Explore the portfolio</a>
-+          <a class="button" href="#contact">Book a project</a>
-+        </div>
-+      </div>
-+      <figure class="hero__media">
-+        <img src="media/illustration2.jpg" alt="Colourful illustration with a dreamy palette by Lianet Rodriguez" loading="lazy">
-+        <figcaption>Frame from the <em>Daydream Bloom</em> illustration series exploring memory and softness.</figcaption>
-+      </figure>
-     </section>
- 
--    <section id="illustration">
--      <h2>Illustration Work</h2>
--      <div class="gallery">
--        <img src="media/illustration1.jpg" alt="Illustration 1">
--        <img src="media/illustration2.jpg" alt="Illustration 2">
-+    <section id="work" class="section animate-on-scroll">
-+      <h2>What I create</h2>
-+      <p class="section-lead">A multidisciplinary practice centred on cinematic storytelling, expressive illustration, and immersive 3D world-building.</p>
-+      <div class="card-grid">
-+        <article class="info-card">
-+          <h3>Film direction</h3>
-+          <p>Short-form narratives and documentary profiles that elevate everyday experiences through colour, sound, and pacing.</p>
-+          <ul class="pill-list">
-+            <li>Narrative shorts</li>
-+            <li>Documentary profiles</li>
-+            <li>Music videos</li>
-+          </ul>
-+        </article>
-+        <article class="info-card">
-+          <h3>Illustration &amp; visual development</h3>
-+          <p>Playful yet refined artwork crafted for editorials, album campaigns, and branding with a pastel-forward palette.</p>
-+          <ul class="pill-list">
-+            <li>Editorial illustration</li>
-+            <li>Character design</li>
-+            <li>Layout &amp; typography</li>
-+          </ul>
-+        </article>
-+        <article class="info-card">
-+          <h3>3D &amp; motion experiments</h3>
-+          <p>Dreamlike sets and lighting studies that support music videos, experiential campaigns, and pre-production planning.</p>
-+          <ul class="pill-list">
-+            <li>Set design previews</li>
-+            <li>Lighting &amp; colour scripting</li>
-+            <li>Motion tests</li>
-+          </ul>
-+        </article>
-       </div>
-     </section>
- 
--    <section id="video">
--      <h2>Video Work</h2>
--      <div class="gallery">
--        <iframe src="https://www.youtube.com/embed/EsO0M8uTfdw?start=77" frameborder="0" allowfullscreen></iframe>
-+    <section id="preview" class="section animate-on-scroll">
-+      <h2>Recent highlights</h2>
-+      <p class="section-lead">Selected frames and studies that reflect my approach to composition, colour, and storytelling across mediums.</p>
-+      <div class="preview-grid">
-+        <figure>
-+          <img src="media/illustration1.jpg" alt="Pastel illustration of characters in conversation" loading="lazy">
-+          <figcaption>Illustration exploring intergenerational storytelling and digital nostalgia.</figcaption>
-+        </figure>
-+        <figure>
-+          <div class="embed">
-+            <iframe src="https://www.youtube.com/embed/EsO0M8uTfdw?start=77" title="Film by Lianet Rodriguez" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
-+          </div>
-+          <figcaption>Excerpt from a narrative short that pairs Miami twilight tones with intimate character studies.</figcaption>
-+        </figure>
-+        <figure>
-+          <img src="media/3d-still.jpg" alt="Dreamlike 3D scene with neon lighting" loading="lazy">
-+          <figcaption>3D previsualisation used to block lighting and camera movement before production day.</figcaption>
-+        </figure>
-       </div>
-     </section>
- 
--    <section id="contact">
--      <h2>Let’s Connect!</h2>
--      <p>Email: <a href="mailto:lianetik96@gmail.com">lianetik96@gmail.com</a></p>
--      <p>Instagram: <a href="https://instagram.com/pastelprizm" target="_blank">@pastelprizm</a></p>
--      <p>LinkedIn: <a href="https://linkedin.com/in/lianetrodriguez" target="_blank">Lianet Rodriguez</a></p>
-+    <section id="contact" class="section section--accent animate-on-scroll">
-+      <h2>Let's collaborate</h2>
-+      <p class="section-lead">Share your brief, mood board, or rough idea—I'll help shape it into a cohesive visual story.</p>
-+      <div class="contact-grid">
-+        <div>
-+          <p>Email: <a href="mailto:lianetik96@gmail.com">lianetik96@gmail.com</a></p>
-+          <p>Instagram: <a href="https://instagram.com/pastelprizm" target="_blank" rel="noreferrer noopener">@pastelprizm</a></p>
-+          <p>LinkedIn: <a href="https://linkedin.com/in/lianetrodriguez" target="_blank" rel="noreferrer noopener">Lianet Rodriguez</a></p>
-+        </div>
-+        <div class="contact-cta">
-+          <p>Looking for direction, illustration, or 3D support? Let's map out the concept, timeline, and deliverables together.</p>
-+          <a class="button button-inverse" href="mailto:lianetik96@gmail.com">Start a project</a>
-+        </div>
-+      </div>
-     </section>
-   </main>
- 
--  <footer>
--    &copy; 2025 Made with love + glitter by Lianet 💖
-+  <footer class="site-footer">
-+    &copy; 2025 Lianet Rodriguez. All rights reserved.
-   </footer>
-+
-+  <script src="scripts/main.js" defer></script>
- </body>
- </html>
--
- 
-EOF
-)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lianet Rodriguez | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Lianet Rodriguez</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
+  <section class="hero">
+    <h2>Film & Illustration Portfolio</h2>
+    <p>Soft, feminine, and timeless work inspired by memory, dreams, and beauty.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Lianet Rodriguez</p>
+  </footer>
+</body>
+</html>
