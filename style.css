@@ -434,11 +434,12 @@ footer {
 
 /* ===== Home: Social strip ===== */
 .home-socials {
-  margin: 28px auto 8px;
+  margin: 60px auto 8px;   /* ⬅️ raised from 28px to 60px */
   padding: 10px 0 30px;
   color: #846c76;
   font-size: 0.98rem;
 }
+
 .home-socials a {
   color: #846c76;
   text-decoration: none;
@@ -451,7 +452,6 @@ footer {
   color: #d4af37;
   border-color: #d4af37;
 }
-
 /* === OPT-IN ORNAMENTS ====================== */
 .frame-gilded {
   position: relative;
