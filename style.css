@@ -544,5 +544,69 @@ footer {
   margin: 4px 0 12px; /* ⬅️ small top and bottom space */
   letter-spacing: 8px;
 }
+/* =================== OVERRIDES (place at end of CSS) =================== */
+
+/* 1) Kill the old floating stars on the whole section */
+.home-feature::before,
+.home-feature::after {
+  display: none !important;
+}
+
+/* 2) Make the standard thin divider star work and sit nicely */
+.divider {
+  position: relative;           /* needed for ::after positioning */
+  margin: 12px auto 14px;       /* slightly tighter than before */
+}
+.divider::after {
+  content: "✦";
+  position: absolute;
+  left: 50%;
+  top: -10px;                   /* sits on the line */
+  transform: translateX(-50%);
+  font-size: 1.15rem;
+  color: #d4af37;               /* brighter gold */
+  opacity: 0.95;
+}
+
+/* 3) Decorative divider (the gold line between CTAs and socials)
+      — put ONE centered row of 5 stars directly *below* the divider */
+.decorative-divider {
+  position: relative;           /* anchor pseudo elements */
+  max-width: 200px;
+  height: 2px;
+  margin: 12px auto 6px;        /* reduce bottom gap under the line */
+  background: linear-gradient(to right, transparent, #d4af37, transparent);
+  border: none;
+  opacity: 0.9;
+  border-radius: 50px;
+}
+
+/* remove the old single-star-on-top for this divider only */
+.decorative-divider::after { content: none; }
+
+/* star row directly BELOW the decorative divider */
+.decorative-divider::before {
+  content: "✦   ✧   ✦   ✧   ✦";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 6px;                     /* places the row just below the line */
+  font-size: 1.2rem;
+  letter-spacing: 0.7rem;
+  color: #d4af37;               /* brighter gold */
+  opacity: 0.95;                /* more visible */
+  pointer-events: none;
+}
+
+/* 4) Tighten the stack spacing (videos → CTAs → divider → stars → socials) */
+.home-ctas {
+  margin: 28px 0 14px;          /* space under videos, closer to divider */
+}
+
+.home-socials {
+  margin: 10px auto 8px;        /* closer to the star row */
+  padding: 6px 0 16px;          /* less padding to the footer */
+}
+
 
 
