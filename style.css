@@ -129,7 +129,7 @@ footer {
   position: relative;
   max-width: 200px;
   height: 2px;
-  margin: 12px auto 4px;  /* close to the stars below */
+  margin: 4px auto 4px;  /* close to the stars below */
   background: linear-gradient(to right, transparent, #d4af37, transparent);
   border: none;
   border-radius: 50px;
