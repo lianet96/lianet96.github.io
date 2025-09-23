@@ -419,5 +419,55 @@ footer {
   color: #d4af37;              /* gold highlight */
   pointer-events: none;        /* not clickable again */
 }
+/* ===== Home hero background (optional) ===== */
+.hero--bg {
+  position: relative;
+  padding: 100px 20px 90px;
+  background: #fff5f8;
+  overflow: hidden;
+}
+.hero--bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images/hero.jpg") center/cover no-repeat;
+  opacity: 0.12;               /* super soft */
+  filter: blur(1px);
+}
+.hero--bg .hero-inner {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===== Home: Featured section & CTAs ===== */
+.home-feature { margin-top: 10px; }
+.home-ctas {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 26px 0 6px;
+}
+
+/* ===== Home: Social strip ===== */
+.home-socials {
+  margin: 28px auto 8px;
+  padding: 10px 0 30px;
+  color: #846c76;
+  font-size: 0.98rem;
+}
+.home-socials a {
+  color: #846c76;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color .2s ease, border-color .2s ease;
+  margin: 0 6px;
+}
+.home-socials a:hover,
+.home-socials a:focus-visible {
+  color: #d4af37;
+  border-color: #d4af37;
+}
 
 
