@@ -516,5 +516,33 @@ footer {
 .home-socials {
   margin: 15px auto 10px;    /* closer to buttons */
   padding: 5px 0 15px;
+}/* Decorative flourish divider - tightened */
+.decorative-divider {
+  max-width: 200px;
+  margin: 20px auto 8px;  /* reduced bottom margin from 18px → 8px */
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #d4af37, transparent);
+  opacity: 0.9;
+  border-radius: 50px;
+  position: relative;
 }
+.decorative-divider::after {
+  content: "✦";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.3rem;
+  color: #d4af37;
+}
+
+/* Star row below divider - spacing tightened */
+.stars-row {
+  font-size: 1.3rem;
+  color: #d4af37;
+  margin: 4px 0 12px; /* ⬅️ small top and bottom space */
+  letter-spacing: 8px;
+}
+
 
