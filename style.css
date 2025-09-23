@@ -434,7 +434,7 @@ footer {
 
 /* ===== Home: Social strip ===== */
 .home-socials {
-  margin: 60px auto 8px;   /* ⬅️ raised from 28px to 60px */
+  margin: 25px auto 8px;   /* ⬅️ raised from 28px to 60px */
   padding: 10px 0 30px;
   color: #846c76;
   font-size: 0.98rem;
