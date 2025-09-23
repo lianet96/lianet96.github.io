@@ -459,3 +459,48 @@ footer {
     radial-gradient(1px 1px at 40% 80%, rgba(0,0,0,.12) 50%, transparent 52%);
   background-size: 180px 180px, 220px 220px, 200px 200px;
 }
+/* --- Featured: single centered star row, brighter, closer to divider --- */
+.home-feature { position: relative; }
+
+/* one row, centered; brighter gold; closer to the bottom */
+.home-feature::before {
+  content: "✦   ✧   ✦   ✧   ✦";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -6px;                 /* pull stars up closer to the divider */
+  color: #e1c25b;               /* slightly brighter than #d4af37 */
+  opacity: .28;                 /* a bit brighter but still soft */
+  filter: blur(.15px);
+  pointer-events: none;
+  font-size: 1.05rem;
+  letter-spacing: .7rem;
+}
+
+/* remove the second row */
+.home-feature::after { display: none !important; }
+
+/* tighten spacing between videos, stars, and socials */
+.home-ctas { margin: 32px 0 12px; }   /* was 50px 0 40px */
+.home-socials { margin: 22px auto 8px; } /* was 60px+ */
+
+/* --- Put a centered gold ✦ on every .divider --- */
+.divider {
+  position: relative;            /* so ::after can center on it */
+}
+.divider::after {
+  content: "✦";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.05rem;
+  color: #d4af37;
+  opacity: .7;
+}
+
+/* --- Optional: tweak the special decorative divider under the logo --- */
+.decorative-divider--underlogo {
+  max-width: 180px;
+  margin: 10px auto 6px;         /* small, elegant line under your name */
+}
