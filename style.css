@@ -488,3 +488,33 @@ footer {
   color: #d4af37;
   opacity: 0.9;                 /* more visible */
 }
+/* Decorative stars below divider */
+.home-feature::before {
+  content: "✦   ✧   ✦   ✧   ✦";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -32px;             /* sits below divider */
+  color: #d4af37;
+  opacity: 0.9;
+  font-size: 1.2rem;
+  letter-spacing: 0.8rem;
+}
+
+/* Remove extra star row */
+.home-feature::after { display: none !important; }
+
+/* Adjust spacing between sections */
+.divider {
+  margin: 12px auto 20px;    /* tighten divider spacing */
+}
+
+.home-ctas {
+  margin: 30px 0 20px;       /* slightly less margin */
+}
+
+.home-socials {
+  margin: 15px auto 10px;    /* closer to buttons */
+  padding: 5px 0 15px;
+}
+
