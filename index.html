@@ -13,7 +13,6 @@
   <!-- Header -->
   <header>
     <h1><a href="index.html" class="logo">Lianet Rodriguez</a></h1>
-    <!-- NEW: Professional descriptor under name -->
     <p class="tagline">Filmmaker · Illustrator · Creative Producer</p>
 
     <hr class="decorative-divider decorative-divider--underlogo">
@@ -24,6 +23,25 @@
       <a href="mailto:lianetik96@gmail.com">Contact</a>
     </nav>
   </header>
+
+  <!-- Slideshow (under nav, above hero) -->
+  <div class="slideshow" aria-label="Featured visuals" role="region">
+    <figure class="slide is-active">
+      <img src="Untitled_Artwork.jpg" alt="Neon diner concept art at night with retro colors" loading="eager" />
+    </figure>
+    <figure class="slide">
+      <img src="p_n_3.png" alt="Blue-lit hooded figure from experimental film still" loading="lazy" />
+    </figure>
+    <figure class="slide">
+      <img src="IMG_2181.jpg" alt="Artist by the ocean with palm trees in South Florida" loading="lazy" />
+    </figure>
+
+    <div class="slideshow-dots" aria-hidden="true">
+      <span class="dot is-active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
 
   <!-- Hero -->
   <section class="hero hero--bg">
@@ -91,19 +109,16 @@
       </article>
     </div><!-- /video-grid -->
 
-    <!-- NEW: Clear availability statement above CTAs -->
     <p class="cta-note">
       Open to freelance, collaborations, and full-time roles in film, media, and arts programming. Relocation-ready.
     </p>
 
-    <!-- CTAs -->
     <div class="home-ctas">
       <a class="btn" href="portfolio.html">View Portfolio</a>
       <a class="btn btn-outline" href="Lianet-Rodriguez-Resume.pdf" target="_blank" rel="noopener">Download Résumé</a>
       <a class="btn btn-outline" href="mailto:lianetik96@gmail.com">Contact</a>
     </div>
 
-    <!-- Decorative divider under CTAs -->
     <hr class="decorative-divider">
   </section>
 
@@ -121,5 +136,29 @@
   <footer>
     <p>&copy; 2025 Lianet Rodriguez</p>
   </footer>
+
+  <!-- Slideshow script -->
+  <script>
+    (function () {
+      const slides = Array.from(document.querySelectorAll('.slideshow .slide'));
+      const dots = Array.from(document.querySelectorAll('.slideshow-dots .dot'));
+      if (slides.length <= 1) return;
+
+      let i = 0;
+      const show = (n) => {
+        slides[i].classList.remove('is-active');
+        dots[i]?.classList.remove('is-active');
+        i = (n + slides.length) % slides.length;
+        slides[i].classList.add('is-active');
+        dots[i]?.classList.add('is-active');
+      };
+
+      let timer = setInterval(() => show(i + 1), 5000);
+      const host = document.querySelector('.slideshow');
+      host.addEventListener('mouseenter', () => clearInterval(timer));
+      host.addEventListener('mouseleave', () => timer = setInterval(() => show(i + 1), 5000));
+      dots.forEach((dot, idx) => dot.addEventListener('click', () => show(idx)));
+    }());
+  </script>
 </body>
 </html>
