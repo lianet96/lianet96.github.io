@@ -338,4 +338,57 @@ footer {
   color: #d4af37;
   border-color: #d4af37;
 }
+/* Tagline under logo */
+.tagline {
+  margin-top: .25rem;
+  font-family: "Playfair Display", serif;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+/* Slideshow */
+.slideshow {
+  position: relative;
+  width: min(1100px, 92vw);
+  margin: 1.25rem auto 0;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+.slideshow .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 900ms ease-in-out;
+  background: #f6e9ee;
+}
+.slideshow .slide.is-active { opacity: 1; }
+.slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.slideshow-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+.slideshow-dots .dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.55);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+.slideshow-dots .dot.is-active { background: rgba(255,255,255,0.95); }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .slideshow .slide { transition: none; }
+}
+
 
