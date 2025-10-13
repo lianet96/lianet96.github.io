@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lianet Rodriguez | Portfolio</title>
 
+  <!-- Meta (SEO + Link previews) -->
+  <meta name="description" content="Lianet Rodriguez — Filmmaker, Illustrator, and Creative Producer. Film, illustration, and installations exploring memory, intimacy, and identity." />
+  <meta property="og:title" content="Lianet Rodriguez — Filmmaker & Illustrator" />
+  <meta property="og:description" content="Film, illustration, and installations that blend tenderness with sharp emotional clarity." />
+  <meta property="og:image" content="IMG_2181.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon (place favicon.png in repo root) -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
   <!-- Fonts + Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
@@ -109,27 +119,20 @@
       </article>
     </div><!-- /video-grid -->
 
+    <!-- Availability line -->
     <p class="cta-note">
       Open to freelance, collaborations, and full-time roles in film, media, and arts programming. Relocation-ready.
     </p>
 
+    <!-- CTAs -->
     <div class="home-ctas">
       <a class="btn" href="portfolio.html">View Portfolio</a>
-      <a class="btn btn-outline" href="Lianet-Rodriguez-Resume.pdf" target="_blank" rel="noopener">Download Résumé</a>
+      <!-- Fixed: PDF link points to your existing filename (URL-encoded space) -->
+      <a class="btn btn-outline" href="my%20resume_Sept_2025.pdf" target="_blank" rel="noopener">Download Résumé</a>
       <a class="btn btn-outline" href="mailto:lianetik96@gmail.com">Contact</a>
     </div>
 
     <hr class="decorative-divider">
-  </section>
-
-  <!-- Social strip -->
-  <section class="home-socials">
-    <span>Follow:</span>
-    <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-    <span>•</span>
-    <a href="https://vimeo.com/" target="_blank" rel="noopener">Vimeo</a>
-    <span>•</span>
-    <a href="https://behance.net/" target="_blank" rel="noopener">Behance</a>
   </section>
 
   <!-- Footer -->
@@ -153,12 +156,18 @@
         dots[i]?.classList.add('is-active');
       };
 
+      // Auto-advance every 5s
       let timer = setInterval(() => show(i + 1), 5000);
+
+      // Pause on hover
       const host = document.querySelector('.slideshow');
       host.addEventListener('mouseenter', () => clearInterval(timer));
       host.addEventListener('mouseleave', () => timer = setInterval(() => show(i + 1), 5000));
+
+      // Click dots to jump
       dots.forEach((dot, idx) => dot.addEventListener('click', () => show(idx)));
     }());
   </script>
 </body>
 </html>
+
