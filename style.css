@@ -262,7 +262,48 @@ body {
   background: rgba(255,255,255,0.55);
   box-shadow: 0 1px 3px rgba(0,0,0,0.15); cursor: pointer;
 }
+
 .slideshow-dots .dot.is-active { background: rgba(255,255,255,0.95); }
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) { .slideshow .slide { transition: none; } }
+/* --- Slideshow arrows: big, translucent, appear on hover --- */
+.slideshow .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 64px;
+  height: 64px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.18); /* transparent & subtle */
+  color: #fff;
+  font-size: 2.3rem; /* makes the chevrons large */
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;              /* hidden by default */
+  transition: opacity .3s ease, background .25s ease, transform .15s ease;
+  z-index: 3;              /* above image */
+}
+.slideshow:hover .arrow { opacity: 1; }          /* show on hover */
+.slideshow .arrow:hover,
+.slideshow .arrow:focus-visible {
+  background: rgba(0,0,0,0.35);
+  transform: translateY(-50%) scale(1.05);
+  outline: var(--ring);
+  outline-offset: 2px;
+}
+.slideshow .arrow:active { transform: translateY(-50%) scale(0.98); }
+.slideshow .arrow.prev { left: 16px; }
+.slideshow .arrow.next { right: 16px; }
+
+/* Keep dots clickable and above image too */
+.slideshow-dots { z-index: 4; }
+
+/* Optional: keep a faint hint of arrows even without hover (comment out if not wanted) */
+/* .slideshow .arrow { opacity: .15; }
+   .slideshow:hover .arrow { opacity: 1; } */
+
