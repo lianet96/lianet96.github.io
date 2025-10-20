@@ -12,10 +12,6 @@
   <meta property="og:image" content="IMG_2181.jpg" />
   <meta property="og:type" content="website" />
 
-  <!-- Favicon (optional) -->
-  <link rel="icon" type="image/png" href="favicon.png" />
-
-  <!-- Fonts + Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -27,21 +23,27 @@
       <h1 class="site-title">
         <a href="index.html" class="logo" aria-label="Go to homepage">Lianet Rodriguez</a>
       </h1>
-      <p class="tagline">Filmmaker · Illustrator · Creative Producer</p>
 
+      <!-- gold line + sparkle under logo -->
       <hr class="decorative-divider decorative-divider--underlogo" aria-hidden="true">
 
       <nav class="primary-nav" aria-label="Primary">
-        <a href="index.html" class="is-active" aria-current="page">Home</a>
+        <a href="index.html">Home</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="about.html">About</a>
         <a href="mailto:lianetik96@gmail.com">Contact</a>
       </nav>
+
+      <!-- gold line + sparkle under nav -->
+      <hr class="decorative-divider decorative-divider--nav" aria-hidden="true">
     </div>
   </header>
 
-  <!-- Slideshow (under nav, above hero) -->
+  <!-- Slideshow (with arrows) -->
   <div class="slideshow" aria-label="Featured visuals" role="region">
+    <button class="arrow prev" aria-label="Previous slide" type="button">&#10094;</button>
+    <button class="arrow next" aria-label="Next slide" type="button">&#10095;</button>
+
     <figure class="slide is-active">
       <img src="Untitled_Artwork.jpg" alt="Neon diner concept art at night with retro colors" loading="eager" />
     </figure>
@@ -63,6 +65,7 @@
   <section class="hero hero--bg">
     <div class="hero-inner">
       <h2>Film &amp; Illustration Portfolio</h2>
+      <div class="divider divider--hero" aria-hidden="true"></div>
       <p>Soft, feminine, and timeless work inspired by memory, dreams, and beauty.</p>
     </div>
   </section>
@@ -111,4 +114,58 @@
       <article class="video-card">
         <div class="embed">
           <iframe
-            src="https://www
+            src="https://www.youtube-nocookie.com/embed/rV3Ol09E_PQ?rel=0&modestbranding=1&controls=1&color=white"
+            title="Logo Animation (2025)"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+        <div class="video-meta">
+          <h4>Logo Animation (2025)</h4>
+          <p>3D/2D Motion • Branding Showcase</p>
+        </div>
+      </article>
+    </div><!-- /video-grid -->
+
+    <p class="cta-note">
+      Open to freelance, collaborations, and full-time roles in film, media, and arts programming. Relocation-ready.
+    </p>
+
+    <div class="home-ctas">
+      <a class="btn" href="portfolio.html">View Portfolio</a>
+      <a class="btn btn-outline" href="my%20resume_Sept_2025.pdf" target="_blank" rel="noopener">Download Résumé</a>
+      <a class="btn btn-outline" href="mailto:lianetik96@gmail.com">Contact</a>
+    </div>
+
+    <hr class="decorative-divider" aria-hidden="true">
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="socials-footer" aria-label="Social media">
+      <a href="https://www.instagram.com/pastelprizm/" target="_blank" rel="noopener" aria-label="Instagram" class="icon-link">
+        <!-- Instagram SVG -->
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a5.5 5.5 0 1 1 0 11.001A5.5 5.5 0 0 1 12 7.5zm0 2a3.5 3.5 0 1 0 0 7.001 3.5 3.5 0 0 0 0-7.001zM18 6.2a1 1 0 1 1 0 2.001 1 1 0 0 1 0-2.001z"/></svg>
+      </a>
+      <a href="https://www.youtube.com/@PastelPrizm" target="_blank" rel="noopener" aria-label="YouTube" class="icon-link">
+        <!-- YouTube SVG -->
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8zM9.75 15.5V8.5l6.25 3.5-6.25 3.5z"/></svg>
+      </a>
+      <a href="https://behance.net/" target="_blank" rel="noopener" aria-label="Behance" class="icon-link">
+        <!-- Behance SVG -->
+        <svg viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path fill="currentColor" d="M9.7 11.1a3.1 3.1 0 0 0 1.9-2.9c0-2.3-1.7-3.2-3.8-3.2H2v14h6.2c2.3 0 4.1-.9 4.1-3.4 0-1.6-.8-2.8-2.6-3.5zM5.1 7.2h2.4c.9 0 1.7.4 1.7 1.4s-.6 1.5-1.6 1.5H5.1V7.2zm2.7 9.6H5.1v-3.6h2.8c1.1 0 2 .5 2 1.8s-.8 1.8-2.1 1.8zM21 7.1h-5.7v-1H21v1zm-.2 5.6c0-2.9-1.5-5-4.4-5-2.7 0-4.4 1.9-4.5 4.6 0 2.9 1.7 4.7 4.5 4.7 2.1 0 3.6-1 4.1-2.8h-2.2c-.2.7-.9 1.2-1.9 1.2-1.3 0-2.1-.9-2.1-2.3h6.5v-.4zm-6.5-1.3c.1-1.1.9-1.9 2-1.9 1.1 0 1.8.8 1.9 1.9H14.3z"/></svg>
+      </a>
+    </div>
+
+    <p>&copy; <span id="year">2025</span> Lianet Rodriguez</p>
+  </footer>
+
+  <!-- Slideshow script -->
+  <script>
+    (function () {
+      const host = document.querySelector('.slideshow');
+      if (!host) return;
+
+      const slides = Array.from(host.querySelectorAll('.slide'));
+      const dots = Array.from(docume
