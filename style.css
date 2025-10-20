@@ -113,27 +113,46 @@ body {
 .h4 { font-size: 1.05rem; margin: 0; }
 .muted { color: var(--muted); }
 
-/* Luxe divider */
+/* ---------- Luxe divider (10px gap) ---------- */
 .divider {
-  position: relative; height: 1px; max-width: 820px;
+  position: relative;
+  height: 1px;
+  max-width: 820px;
   margin: 12px auto 14px;
   background: linear-gradient(to right, transparent, var(--gold), transparent);
   opacity: .58;
 }
 .divider::after {
-  content: "✦"; position: absolute; left: 50%; top: -10px;
-  transform: translateX(-50%); font-size: 1.1rem; color: var(--gold);
+  content: "✦";
+  position: absolute;
+  left: 50%;
+  top: 10px; /* consistent 10px below the line */
+  transform: translateX(-50%);
+  font-size: 1.1rem;
+  color: var(--gold);
+  opacity: .95;
 }
+
 .decorative-divider {
-  position: relative; max-width: 200px; height: 2px;
+  position: relative;
+  max-width: 200px;
+  height: 2px;
   margin: 6px auto 4px;
   background: linear-gradient(to right, transparent, var(--gold), transparent);
-  border: none; border-radius: 60px;
+  border: none;
+  border-radius: 60px;
+  opacity: .9;
 }
 .decorative-divider::before {
   content: "✦   ✧   ✦   ✧   ✦";
-  position: absolute; left: 50%; transform: translateX(-50%);
-  top: 6px; font-size: 1.15rem; letter-spacing: .7rem; color: var(--gold);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px; /* consistent 10px below the line */
+  font-size: 1.15rem;
+  letter-spacing: .7rem;
+  color: var(--gold);
+  opacity: .95;
   pointer-events: none;
 }
 
@@ -262,11 +281,8 @@ body {
   background: rgba(255,255,255,0.55);
   box-shadow: 0 1px 3px rgba(0,0,0,0.15); cursor: pointer;
 }
-
 .slideshow-dots .dot.is-active { background: rgba(255,255,255,0.95); }
 
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce) { .slideshow .slide { transition: none; } }
 /* --- Slideshow arrows: big, translucent, appear on hover --- */
 .slideshow .arrow {
   position: absolute;
@@ -303,7 +319,7 @@ body {
 /* Keep dots clickable and above image too */
 .slideshow-dots { z-index: 4; }
 
-/* Optional: keep a faint hint of arrows even without hover (comment out if not wanted) */
-/* .slideshow .arrow { opacity: .15; }
-   .slideshow:hover .arrow { opacity: 1; } */
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) { .slideshow .slide { transition: none; } }
+
 
