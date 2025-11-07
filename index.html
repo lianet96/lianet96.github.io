@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
   <!-- Header -->
@@ -25,8 +26,6 @@
         <a href="index.html" class="logo" aria-label="Go to homepage">Lianet Rodriguez</a>
       </h1>
 
-      <hr class="decorative-divider decorative-divider--underlogo" aria-hidden="true">
-
       <nav class="primary-nav" aria-label="Primary">
         <a href="index.html" class="active">Home</a>
         <a href="portfolio.html">Portfolio</a>
@@ -34,7 +33,11 @@
         <a href="mailto:lianetik96@gmail.com">Contact</a>
       </nav>
 
-      <hr class="decorative-divider decorative-divider--nav" aria-hidden="true">
+      <div class="nav-star-divider" aria-hidden="true">
+        <span class="line"></span>
+        <span class="star">✦</span>
+        <span class="line"></span>
+      </div>
     </div>
   </header>
 
@@ -87,4 +90,38 @@
           </iframe>
         </div>
         <div class="video-meta">
-          <h4>Acceptance (2
+          <h4>Acceptance (2025)</h4>
+          <p>A short film exploring self-image and emotional honesty through surreal storytelling.</p>
+        </div>
+      </article>
+
+      <!-- Video 2 -->
+      <article class="video-card">
+        <div class="embed">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/T-7N2H7Z0gI?rel=0&modestbranding=1&controls=1&color=white"
+            title="Pena Íntima (2024)"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+        <div class="video-meta">
+          <h4>Pena Íntima (2024)</h4>
+          <p>Screened at the Chroma Art Film Festival. A poetic installation merging art and vulnerability.</p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; <span id="year">2025</span> Lianet Rodriguez</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
