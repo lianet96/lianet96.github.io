@@ -55,8 +55,15 @@ body {
 }
 
 /* ---------- Header & Nav ---------- */
-.site-header { padding: clamp(28px, 4vw, 40px) 0 20px; }
-.header-inner { display: grid; gap: 8px; justify-items: center; }
+.site-header {
+  padding: clamp(20px, 3vw, 28px) 0 12px; /* moved slightly up */
+}
+
+.header-inner {
+  display: grid;
+  gap: 6px; /* reduced space for tighter layout */
+  justify-items: center;
+}
 
 .site-title {
   margin: 0;
@@ -74,9 +81,9 @@ body {
 .logo:focus-visible { color: var(--gold); }
 
 .primary-nav {
-  margin-top: 10px;
+  margin-top: 8px;
   display: flex;
-  gap: clamp(12px, 4.5vw, 28px);
+  gap: clamp(12px, 4vw, 28px);
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -118,7 +125,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
 .sparkle-divider .line {
@@ -143,7 +150,7 @@ body {
 .nav-divider {
   width: 160px;
   height: 1px;
-  margin: 8px auto 0;
+  margin: 12px auto 18px; /* spacing below nav */
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
   opacity: .95;
   border-radius: 2px;
@@ -154,9 +161,9 @@ body {
   content: "✦";
   position: absolute;
   left: 50%;
-  top: -10px;
+  top: 6px; /* star sits below the line now */
   transform: translateX(-50%);
-  font-size: .85rem;
+  font-size: .9rem;
   color: var(--gold);
   opacity: .75;
 }
