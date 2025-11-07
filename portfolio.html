@@ -1,58 +1,105 @@
+<!DOCTYPE html>
 <html lang="en">
-<figure class="thumb">
-<img src="images/work-01.jpg" alt="Haunted Hours Poster" loading="lazy" width="1200" height="750">
-</figure>
-<div class="meta">
-<h3>Haunted Hours Poster</h3>
-<p>Key art • 2025</p>
-</div>
-</a>
-</article>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio | Lianet Rodriguez</title>
 
+  <!-- Meta -->
+  <meta name="description" content="Film direction, illustration, and mixed-media works by Lianet Rodriguez — exploring identity, memory, and emotion." />
+  <meta property="og:title" content="Portfolio | Lianet Rodriguez" />
+  <meta property="og:description" content="Film, illustration, and mixed-media projects blending tenderness and sharp visual storytelling." />
+  <meta property="og:image" content="IMG_2181.jpg" />
+  <meta property="og:type" content="website" />
 
-<article class="card">
-<a href="#" class="card-link">
-<figure class="thumb">
-<img src="images/work-02.jpg" alt="Pena Íntima sketchbook page" loading="lazy" width="1200" height="750">
-</figure>
-<div class="meta">
-<h3>Pena Íntima Sketches</h3>
-<p>Sketchbook • 2024</p>
-</div>
-</a>
-</article>
+  <!-- Fonts + Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
+<body>
 
-<article class="card">
-<a href="#" class="card-link">
-<figure class="thumb">
-<img src="images/work-03.jpg" alt="Acceptance visual development concept art" loading="lazy" width="1200" height="750">
-</figure>
-<div class="meta">
-<h3>Acceptance Concept</h3>
-<p>Visual development • 2025</p>
-</div>
-</a>
-</article>
-</section>
-</section>
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <h1 class="site-title">
+        <a href="index.html" class="logo">Lianet Rodriguez</a>
+      </h1>
 
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="mailto:lianetik96@gmail.com">Contact</a>
+      </nav>
 
-<!-- ===== Installations / Mixed Media ===== -->
-<section id="installations" class="video-section" aria-labelledby="installations-heading">
-<h2 id="installations-heading" class="section-title">Installations</h2>
-<div class="divider" aria-hidden="true"></div>
-<p class="muted">Coming soon.</p>
-</section>
+      <div class="nav-star-divider" aria-hidden="true">
+        <span class="line"></span>
+        <span class="star">✦</span>
+        <span class="line"></span>
+      </div>
+    </div>
+  </header>
 
+  <main class="container" role="main">
+    <!-- ===== Films ===== -->
+    <section id="films" class="video-section" aria-labelledby="films-heading">
+      <h2 id="films-heading" class="section-title">Films</h2>
+      <div class="divider" aria-hidden="true"></div>
 
-</main>
+      <div class="video-grid">
+        <article class="card">
+          <a href="#" class="card-link">
+            <figure class="thumb">
+              <img src="images/work-01.jpg" alt="Haunted Hours Poster" loading="lazy" width="1200" height="750">
+            </figure>
+            <div class="meta">
+              <h3>Haunted Hours Poster</h3>
+              <p>Key art • 2025</p>
+            </div>
+          </a>
+        </article>
 
+        <article class="card">
+          <a href="#" class="card-link">
+            <figure class="thumb">
+              <img src="images/work-02.jpg" alt="Pena Íntima sketchbook page" loading="lazy" width="1200" height="750">
+            </figure>
+            <div class="meta">
+              <h3>Pena Íntima Sketches</h3>
+              <p>Sketchbook • 2024</p>
+            </div>
+          </a>
+        </article>
 
-<footer class="site-footer" role="contentinfo">
-<p>&copy; <span id="year">2025</span> Lianet Rodriguez</p>
-</footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+        <article class="card">
+          <a href="#" class="card-link">
+            <figure class="thumb">
+              <img src="images/work-03.jpg" alt="Acceptance visual development concept art" loading="lazy" width="1200" height="750">
+            </figure>
+            <div class="meta">
+              <h3>Acceptance Concept</h3>
+              <p>Visual development • 2025</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Installations / Mixed Media ===== -->
+    <section id="installations" class="video-section" aria-labelledby="installations-heading">
+      <h2 id="installations-heading" class="section-title">Installations</h2>
+      <div class="divider" aria-hidden="true"></div>
+      <p class="muted">Coming soon.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; <span id="year">2025</span> Lianet Rodriguez</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
