@@ -33,11 +33,15 @@
         <a href="mailto:lianetik96@gmail.com">Contact</a>
       </nav>
 
+      <!-- ✦ Gold divider under nav -->
       <div class="nav-star-divider" aria-hidden="true">
         <span class="line"></span>
         <span class="star">✦</span>
         <span class="line"></span>
       </div>
+
+      <!-- Tagline under nav star -->
+      <p class="tagline"><em>Soft, feminine, and timeless work inspired by memory, dreams, and beauty.</em></p>
     </div>
   </header>
 
@@ -67,26 +71,37 @@
   <section class="hero hero--bg">
     <div class="hero-inner">
       <h2>Film &amp; Illustration Portfolio</h2>
-      <div class="divider divider--hero" aria-hidden="true"></div>
-      <p>Soft, feminine, and timeless work inspired by memory, dreams, and beauty.</p>
+
+      <!-- ✦ Matching gold star divider -->
+      <div class="nav-star-divider" aria-hidden="true">
+        <span class="line"></span>
+        <span class="star">✦</span>
+        <span class="line"></span>
+      </div>
     </div>
   </section>
 
-  <!-- Featured Preview -->
+  <!-- Featured Section -->
   <main class="home-feature container" role="main">
     <h2 class="section-title">Featured</h2>
-    <div class="divider" aria-hidden="true"></div>
+
+    <!-- ✦ Matching gold star divider -->
+    <div class="nav-star-divider" aria-hidden="true">
+      <span class="line"></span>
+      <span class="star">✦</span>
+      <span class="line"></span>
+    </div>
 
     <div class="video-grid">
-      <!-- Video 1 -->
+
+      <!-- Acceptance -->
       <article class="video-card">
         <div class="embed">
           <iframe
             src="https://www.youtube-nocookie.com/embed/r12gYlTEO1Y?rel=0&modestbranding=1&controls=1&color=white"
             title="Acceptance (2025)"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-            loading="lazy">
+            allowfullscreen loading="lazy">
           </iframe>
         </div>
         <div class="video-meta">
@@ -95,15 +110,14 @@
         </div>
       </article>
 
-      <!-- Video 2 -->
+      <!-- Pena Íntima -->
       <article class="video-card">
         <div class="embed">
           <iframe
-            src="https://www.youtube-nocookie.com/embed/T-7N2H7Z0gI?rel=0&modestbranding=1&controls=1&color=white"
+            src="https://www.youtube-nocookie.com/embed/adlFV3cI6DU?rel=0&modestbranding=1&controls=1&color=white"
             title="Pena Íntima (2024)"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-            loading="lazy">
+            allowfullscreen loading="lazy">
           </iframe>
         </div>
         <div class="video-meta">
@@ -111,6 +125,23 @@
           <p>Screened at the Chroma Art Film Festival. A poetic installation merging art and vulnerability.</p>
         </div>
       </article>
+
+      <!-- Animation Reel -->
+      <article class="video-card">
+        <div class="embed">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/BMqsjLgR6Yc?rel=0&modestbranding=1&controls=1&color=white"
+            title="Animation Reel 2024"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen loading="lazy">
+          </iframe>
+        </div>
+        <div class="video-meta">
+          <h4>Animation Reel (2024)</h4>
+          <p>A curated mix of motion and animation sequences blending style, rhythm, and emotion.</p>
+        </div>
+      </article>
+
     </div>
   </main>
 
@@ -119,8 +150,34 @@
     <p>&copy; <span id="year">2025</span> Lianet Rodriguez</p>
   </footer>
 
+  <!-- ===== Scripts ===== -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth working slideshow
+    document.addEventListener("DOMContentLoaded", () => {
+      const slideshow = document.querySelector(".slideshow");
+      if (!slideshow) return;
+
+      const slides = [...slideshow.querySelectorAll(".slide")];
+      const dots = [...slideshow.querySelectorAll(".dot")];
+      const prev = slideshow.querySelector(".prev");
+      const next = slideshow.querySelector(".next");
+      let index = 0;
+
+      function showSlide(n) {
+        index = (n + slides.length) % slides.length;
+        slides.forEach((s, i) => s.classList.toggle("is-active", i === index));
+        dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
+      }
+
+      prev.addEventListener("click", () => showSlide(index - 1));
+      next.addEventListener("click", () => showSlide(index + 1));
+      dots.forEach((dot, i) => dot.addEventListener("click", () => showSlide(i)));
+
+      // Optional auto-slide every 7 seconds
+      setInterval(() => showSlide(index + 1), 7000);
+    });
   </script>
 
 </body>
