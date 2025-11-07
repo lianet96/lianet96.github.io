@@ -1,5 +1,5 @@
 /* =========================
- style.css — Elegant Unified Version
+ style.css — Elegant Unified Version (tight spacing)
  Updated: 2025-11-07
 ========================= */
 
@@ -56,11 +56,11 @@ body {
 
 /* ---------- Header & Nav ---------- */
 .site-header {
-  padding: clamp(18px, 3vw, 26px) 0 0;
+  padding: clamp(14px, 2.4vw, 20px) 0 0; /* tighter top/bottom */
 }
 .header-inner {
   display: grid;
-  gap: 8px;
+  gap: 4px; /* tighter vertical gaps inside header */
   justify-items: center;
 }
 
@@ -80,7 +80,7 @@ body {
 .logo:focus-visible { color: var(--gold); }
 
 .primary-nav {
-  margin-top: 10px;
+  margin-top: 6px; /* was 10px */
   display: flex;
   gap: clamp(12px, 4.5vw, 28px);
   flex-wrap: wrap;
@@ -120,7 +120,7 @@ body {
   justify-content: center;
   gap: 4px;
   width: min(600px, 80%);
-  margin: 8px auto 0;
+  margin: 4px auto 0; /* tighter */
 }
 .nav-star-divider .line {
   flex: 1;
@@ -141,18 +141,21 @@ body {
 
 /* ---------- Tagline (under nav star) ---------- */
 .tagline {
-  margin: 6px auto 8px;           /* tighter gap below */
+  margin: 2px auto 3px;      /* extra tight */
   font-size: 1.05rem;
   color: var(--ink-2);
   max-width: 700px;
-  line-height: 1.5;
+  line-height: 1.45;
   opacity: 0.95;
   font-style: italic;
+}
+@media (max-width:700px){
+  .tagline { margin: 2px auto 2px; }
 }
 
 /* ---------- Hero (index heading area) ---------- */
 .hero {
-  padding: clamp(40px, 5.5vw, 60px) 20px; /* slightly reduced overall */
+  padding: clamp(36px, 5vw, 56px) 20px; /* slightly reduced overall */
   position: relative;
 }
 .hero h2 {
@@ -284,7 +287,7 @@ body {
 .slideshow {
   position: relative;
   width: min(1100px, 92vw);
-  margin: 0 auto;                 /* removed top margin for snug fit */
+  margin: 0 auto; /* snug under tagline */
   aspect-ratio: 16 / 9;
   border-radius: 14px;
   overflow: hidden;
@@ -430,3 +433,13 @@ body {
   border-top: 1px solid var(--border);
 }
 
+/* Kill extra space below header so slideshow hugs the tagline */
+.site-header .container {
+  padding-bottom: 0 !important;   /* overrides the global container bottom padding */
+}
+
+/* keep things tight inside header */
+.header-inner { gap: 10px; }
+.primary-nav { margin-top: 6px; }
+.nav-star-divider { margin-top: 2px; }
+.tagline { margin: 22px auto 10px; }
