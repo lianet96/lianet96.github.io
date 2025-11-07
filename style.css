@@ -443,3 +443,36 @@ body {
 .primary-nav { margin-top: 6px; }
 .nav-star-divider { margin-top: 2px; }
 .tagline { margin: 22px auto 10px; }
+
+
+.slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 14px;       /* softens each image’s edges to match slideshow */
+  transition: transform 0.5s ease, filter 0.5s ease;
+  filter: brightness(0.97) contrast(1.03);
+}
+
+/* add this for a subtle zoom-in animation */
+.slideshow .slide.is-active img {
+  transform: scale(1.03);
+  filter: brightness(1) contrast(1.05);
+}
+.slideshow {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border-radius: 14px;
+  background: #f6e9ee;
+  overflow: hidden;
+}
+
+.slideshow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.12);
+  pointer-events: none;
+}
