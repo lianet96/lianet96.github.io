@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lianet Rodriguez | Portfolio</title>
 
-  <!-- Meta -->
+  <!-- Meta (SEO + Link previews) -->
   <meta name="description" content="Lianet Rodriguez — Filmmaker, Illustrator, and Creative Producer. Film, illustration, and installations exploring memory, intimacy, and identity." />
   <meta property="og:title" content="Lianet Rodriguez — Filmmaker & Illustrator" />
   <meta property="og:description" content="Film, illustration, and installations that blend tenderness with sharp emotional clarity." />
@@ -15,33 +15,6 @@
   <!-- Fonts + Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-
-  <style>
-    /* tighter spacing under tagline and artist statement */
-    .tagline {
-      margin-top: 8px;
-      margin-bottom: 16px;
-      font-size: 1.05rem;
-      color: var(--ink-2);
-    }
-
-    .slideshow {
-      margin-top: 0.5rem; /* closer to tagline */
-    }
-
-    .hero {
-      padding: 36px 20px 18px; /* less space under artist statement */
-    }
-
-    @media (max-width: 700px) {
-      .hero {
-        padding: 28px 16px 12px;
-      }
-      .tagline {
-        margin-bottom: 12px;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -68,7 +41,7 @@
       </div>
 
       <!-- Tagline -->
-      <p class="tagline"><em>Soft, feminine, and timeless work inspired by memory, dreams, and beauty.</em></p>
+      <p class="tagline">Soft, feminine, and timeless work inspired by memory, dreams, and beauty.</p>
     </div>
   </header>
 
@@ -78,37 +51,41 @@
     <button class="arrow next" aria-label="Next slide" type="button">&#10095;</button>
 
     <figure class="slide is-active">
-      <img src="Untitled_Artwork.jpg" alt="Neon diner concept art at night with retro colors" loading="eager" />
+      <img src="Acceptance_01.jpg" alt="Acceptance film still 1" loading="eager" />
     </figure>
     <figure class="slide">
-      <img src="p_n_3.png" alt="Blue-lit hooded figure from experimental film still" loading="lazy" />
+      <img src="Acceptance_02.jpg" alt="Acceptance film still 2" loading="lazy" />
     </figure>
     <figure class="slide">
-      <img src="IMG_2181.jpg" alt="Artist by the ocean with palm trees in South Florida" loading="lazy" />
+      <img src="3DLandscape.png" alt="3D digital landscape artwork" loading="lazy" />
+    </figure>
+    <figure class="slide">
+      <img src="hands.gif" alt="Looping animation of illustrated hands" loading="lazy" />
     </figure>
 
     <div class="slideshow-dots" aria-hidden="true">
       <span class="dot is-active"></span>
       <span class="dot"></span>
       <span class="dot"></span>
+      <span class="dot"></span>
     </div>
   </div>
 
-  <!-- About My Work Section -->
+  <!-- Hero -->
   <section class="hero hero--bg">
     <div class="hero-inner">
-      <h2>About My Work</h2>
+      <h2>Artist Statement</h2>
 
+      <!-- ✦ Matching gold star divider -->
       <div class="nav-star-divider" aria-hidden="true">
         <span class="line"></span>
         <span class="star">✦</span>
         <span class="line"></span>
       </div>
 
-      <p class="hero-text">
-        My work lives between softness and tension — a reflection of identity, intimacy, and memory through film, illustration, and installation. 
-        I’m drawn to the moments when beauty turns unsettling and vulnerability becomes power. 
-        Every piece I make is a way to understand the strange poetry of being alive.
+      <p>
+        My work examines the intersection of identity, tenderness, and the surreal. I explore how memory shapes the body—how the ordinary becomes divine through emotion and design. 
+        Each piece aims to find beauty in discomfort and truth in vulnerability.
       </p>
     </div>
   </section>
@@ -117,6 +94,7 @@
   <main class="home-feature container" role="main">
     <h2 class="section-title">Featured</h2>
 
+    <!-- ✦ Matching gold star divider -->
     <div class="nav-star-divider" aria-hidden="true">
       <span class="line"></span>
       <span class="star">✦</span>
@@ -124,6 +102,7 @@
     </div>
 
     <div class="video-grid">
+      <!-- Video 1 -->
       <article class="video-card">
         <div class="embed">
           <iframe
@@ -139,10 +118,11 @@
         </div>
       </article>
 
+      <!-- Video 2 -->
       <article class="video-card">
         <div class="embed">
           <iframe
-            src="https://www.youtube-nocookie.com/embed/adlFV3cI6DU?rel=0&modestbranding=1&controls=1&color=white"
+            src="https://www.youtube-nocookie.com/embed/adlFV3cI6DU?si=HiDHqYFYfBoAFpWX"
             title="Pena Íntima (2024)"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen loading="lazy">
@@ -154,18 +134,19 @@
         </div>
       </article>
 
+      <!-- Video 3 -->
       <article class="video-card">
         <div class="embed">
           <iframe
-            src="https://www.youtube-nocookie.com/embed/BMqsjLgR6Yc?rel=0&modestbranding=1&controls=1&color=white"
-            title="Haunted Hours (2025)"
+            src="https://www.youtube-nocookie.com/embed/BMqsjLgR6Yc?si=pCWcWB0Nl8xo7iIa"
+            title="Experimental Short (2024)"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen loading="lazy">
           </iframe>
         </div>
         <div class="video-meta">
-          <h4>Haunted Hours (2025)</h4>
-          <p>A night guard’s grip on reality fractures in a haunted museum where time no longer obeys.</p>
+          <h4>Experimental Short (2024)</h4>
+          <p>A hybrid film-art experiment blending abstraction, motion, and intimacy through color and rhythm.</p>
         </div>
       </article>
     </div>
@@ -176,10 +157,11 @@
     <p>&copy; <span id="year">2025</span> Lianet Rodriguez</p>
   </footer>
 
-  <!-- Scripts -->
+  <!-- ===== Scripts ===== -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // Smooth working slideshow
     document.addEventListener("DOMContentLoaded", () => {
       const slideshow = document.querySelector(".slideshow");
       if (!slideshow) return;
@@ -199,6 +181,8 @@
       prev.addEventListener("click", () => showSlide(index - 1));
       next.addEventListener("click", () => showSlide(index + 1));
       dots.forEach((dot, i) => dot.addEventListener("click", () => showSlide(i)));
+
+      // Auto-slide every 7 seconds
       setInterval(() => showSlide(index + 1), 7000);
     });
   </script>
