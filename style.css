@@ -322,4 +322,28 @@ body {
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) { .slideshow .slide { transition: none; } }
 
+.sparkle-divider {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  margin-top:6px;
+}
+
+.sparkle-divider .line {
+  flex:1;
+  height:1px;
+  background:linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+.sparkle-divider .star {
+  color:#d4af37;
+  font-size:14px;
+  transition:transform .4s ease, filter .4s ease;
+}
+
+.sparkle-divider .star:hover {
+  transform:scale(1.3) rotate(12deg);
+  filter:drop-shadow(0 0 4px #ffd700);
+}
 
