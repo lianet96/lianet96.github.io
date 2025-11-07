@@ -227,3 +227,25 @@ body {
 @media (max-width: 900px) {
   .about-list { grid-template-columns: 1fr; text-align: center; }
 }
+/* ---------- About Page Links & Buttons Styling ---------- */
+.about-actions a,
+.about-content a {
+  color: var(--rose);              /* matches your name/title color */
+  text-decoration: none;           /* removes underline */
+  transition: color .25s ease;
+}
+
+.about-actions a:hover,
+.about-actions a:focus-visible,
+.about-content a:hover,
+.about-content a:focus-visible {
+  color: var(--gold);              /* turns gold on hover */
+}
+
+/* optional: keep buttons cohesive */
+.btn,
+.btn-outline {
+  text-decoration: none;
+  transition: color .25s ease, background .25s ease, border-color .25s ease;
+}
+
