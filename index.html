@@ -5,19 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lianet Rodriguez | Portfolio</title>
 
-  <!-- Meta -->
   <meta name="description" content="Lianet Rodriguez — Filmmaker, Illustrator, and Creative Producer. Film, illustration, and installations exploring memory, intimacy, and identity." />
   <meta property="og:title" content="Lianet Rodriguez — Filmmaker & Illustrator" />
   <meta property="og:description" content="Film, illustration, and installations that blend tenderness with sharp emotional clarity." />
   <meta property="og:image" content="IMG_2181.jpg" />
   <meta property="og:type" content="website" />
 
-  <!-- Fonts + CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+
   <!-- Header -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
@@ -32,91 +31,45 @@
         <a href="mailto:lianetik96@gmail.com">Contact</a>
       </nav>
 
-      <!-- ✦ Gold divider -->
+      <!-- ✦ Gold divider under nav -->
       <div class="nav-star-divider" aria-hidden="true">
         <span class="line"></span>
         <span class="star">✦</span>
         <span class="line"></span>
       </div>
+
+      <!-- Tagline -->
+      <p class="tagline"><em>Soft, feminine, and timeless work inspired by memory, dreams, and beauty.</em></p>
     </div>
   </header>
 
-  <!-- Tagline -->
-  <p class="tagline">Soft, feminine, and timeless work inspired by memory, dreams, and beauty.</p>
-
-  <!-- Slideshow -->
+  <!-- Slideshow (side-to-side, preserves image proportions) -->
   <div class="slideshow" aria-label="Featured visuals" role="region">
     <button class="arrow prev" aria-label="Previous slide" type="button">&#10094;</button>
-    <button class="arrow next" aria-label="Next slide" type="button">&#10095;</button>
 
-    <figure class="slide is-active">
-      <img src="Untitled_Artwork.jpg" alt="Neon diner concept art at night with retro colors" loading="eager" />
-    </figure>
-
-    <figure class="slide">
-      <img src="p_n_3.png" alt="Blue-lit hooded figure from experimental film still" loading="lazy" />
-    </figure>
-
-    <figure class="slide">
-      <img src="IMG_2181.jpg" alt="Artist by the ocean with palm trees in South Florida" loading="lazy" />
-    </figure>
-
-    <!-- New images -->
-    <figure class="slide">
-      <img src="Acceptance_01.jpg" alt="Acceptance frame 01" loading="lazy" />
-    </figure>
-
-    <figure class="slide">
-      <img src="Acceptance_02.jpg" alt="Acceptance frame 02" loading="lazy" />
-    </figure>
-
-    <figure class="slide">
-      <img src="hands.gif" alt="Animated hands study" loading="lazy" />
-    </figure>
-
-    <figure class="slide">
-      <img src="characters.png" alt="Character lineup" loading="lazy" />
-    </figure>
-
-    <figure class="slide">
-      <img src="mermen.png" alt="Mermen concept art" loading="lazy" />
-    </figure>
-
-    <figure class="slide">
-      <img src="sketches.png" alt="Sketchbook collage" loading="lazy" />
-    </figure>
-
-    <figure class="slide">
-      <img src="anxiety%204.PNG" alt="Anxiety panel" loading="lazy" />
-    </figure>
-
-    <div class="slideshow-dots" aria-hidden="true">
-      <span class="dot is-active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
+    <div class="slides-track">
+      <!-- Only list the images you want; broken ones get auto-removed by JS -->
+      <figure class="slide"><img src="Untitled_Artwork.jpg" alt="Neon diner concept art" loading="eager" /></figure>
+      <figure class="slide"><img src="p_n_3.png" alt="Blue-lit hooded figure" loading="lazy" /></figure>
+      <figure class="slide"><img src="IMG_2181.jpg" alt="Artist by the ocean" loading="lazy" /></figure>
+      <figure class="slide"><img src="Acceptance_01.jpg" alt="Acceptance still 01" loading="lazy" /></figure>
+      <figure class="slide"><img src="Acceptance_02.jpg" alt="Acceptance still 02" loading="lazy" /></figure>
+      <figure class="slide"><img src="hands.gif" alt="Hands animated loop" loading="lazy" /></figure>
+      <figure class="slide"><img src="characters.png" alt="Character sheet" loading="lazy" /></figure>
+      <figure class="slide"><img src="mermen.png" alt="Mermen concept" loading="lazy" /></figure>
+      <figure class="slide"><img src="sketches.png" alt="Sketches collage" loading="lazy" /></figure>
+      <figure class="slide"><img src="anxiety%204.PNG" alt="Anxiety panel" loading="lazy" /></figure>
     </div>
+
+    <div class="slideshow-dots" aria-hidden="true"></div>
+    <button class="arrow next" aria-label="Next slide" type="button">&#10095;</button>
   </div>
 
   <!-- Artist Mission -->
   <section class="hero hero--bg">
     <div class="hero-inner">
       <h2>Artist Mission</h2>
-      <div class="nav-star-divider" aria-hidden="true">
-        <span class="line"></span>
-        <span class="star">✦</span>
-        <span class="line"></span>
-      </div>
-      <p>
-        I create art that embraces emotional honesty, celebrates femininity, and challenges the quiet shame we inherit.
-        Through film, illustration, and mixed media, I explore how memory and identity intertwine, revealing the beauty in being both fragile and strong.
-      </p>
+      <p>I make tender, coquette worlds with bite—cinema, illustration, and installations about identity, memory, and the strange poetry of everyday life.</p>
     </div>
   </section>
 
@@ -137,7 +90,8 @@
             src="https://www.youtube-nocookie.com/embed/r12gYlTEO1Y?rel=0&modestbranding=1&controls=1&color=white"
             title="Acceptance (2025)"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen loading="lazy"></iframe>
+            allowfullscreen loading="lazy">
+          </iframe>
         </div>
         <div class="video-meta">
           <h4>Acceptance (2025)</h4>
@@ -148,10 +102,11 @@
       <article class="video-card">
         <div class="embed">
           <iframe
-            src="https://www.youtube-nocookie.com/embed/adlFV3cI6DU?rel=0&modestbranding=1&controls=1&color=white"
+            src="https://www.youtube-nocookie.com/embed/adlFV3cI6DU?si=HiDHqYFYfBoAFpWX&rel=0&modestbranding=1&controls=1&color=white"
             title="Pena Íntima (2024)"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen loading="lazy"></iframe>
+            allowfullscreen loading="lazy">
+          </iframe>
         </div>
         <div class="video-meta">
           <h4>Pena Íntima (2024)</h4>
@@ -162,20 +117,20 @@
       <article class="video-card">
         <div class="embed">
           <iframe
-            src="https://www.youtube-nocookie.com/embed/BMqsjLgR6Yc?rel=0&modestbranding=1&controls=1&color=white"
-            title="Haunted Hours (2025)"
+            src="https://www.youtube-nocookie.com/embed/BMqsjLgR6Yc?si=pCWcWB0Nl8xo7iIa&rel=0&modestbranding=1&controls=1&color=white"
+            title="Behind the Scenes"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen loading="lazy"></iframe>
+            allowfullscreen loading="lazy">
+          </iframe>
         </div>
         <div class="video-meta">
-          <h4>Haunted Hours (2025)</h4>
-          <p>A surreal student horror short about a museum guard losing track of time as the art comes alive.</p>
+          <h4>Behind the Scenes</h4>
+          <p>Process, experiments, and tiny obsessions feeding bigger projects.</p>
         </div>
       </article>
     </div>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
     <p>&copy; <span id="year">2025</span> Lianet Rodriguez</p>
   </footer>
@@ -183,45 +138,72 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const slideshow = document.querySelector(".slideshow");
-      if (!slideshow) return;
+    // Side-to-side slider that preserves image proportions and auto-removes broken images
+    document.addEventListener('DOMContentLoaded', async () => {
+      const slideshow = document.querySelector('.slideshow');
+      const track = slideshow.querySelector('.slides-track');
+      const prev = slideshow.querySelector('.prev');
+      const next = slideshow.querySelector('.next');
+      const dotsWrap = slideshow.querySelector('.slideshow-dots');
 
-      const slides = [...slideshow.querySelectorAll(".slide")];
-      const dots = [...slideshow.querySelectorAll(".dot")];
-      const prev = slideshow.querySelector(".prev");
-      const next = slideshow.querySelector(".next");
-      let index = 0;
-
-      // Detect tall images to crop from bottom
-      function tagTall(img, slide) {
-        if (img.naturalWidth && img.naturalHeight) {
-          if (img.naturalHeight / img.naturalWidth > 1.15) {
-            slide.classList.add('tall');
-          }
-        }
+      // preload + remove broken images
+      async function filterBroken() {
+        const figures = Array.from(track.querySelectorAll('.slide'));
+        const checks = figures.map(fig => {
+          const img = fig.querySelector('img');
+          return new Promise(resolve => {
+            const test = new Image();
+            test.onload = () => resolve({ fig, ok: true });
+            test.onerror = () => resolve({ fig, ok: false });
+            test.src = img.src;
+          });
+        });
+        const results = await Promise.all(checks);
+        results.forEach(({ fig, ok }) => { if (!ok) fig.remove(); });
       }
-      slides.forEach(slide => {
-        const img = slide.querySelector('img');
-        if (!img) return;
-        if (img.complete) {
-          tagTall(img, slide);
-        } else {
-          img.addEventListener('load', () => tagTall(img, slide), { once: true });
-        }
+
+      await filterBroken();
+
+      let slides = Array.from(track.querySelectorAll('.slide'));
+      if (slides.length === 0) return;
+
+      // set widths for flex track
+      function layout() {
+        slides = Array.from(track.querySelectorAll('.slide'));
+        track.style.width = `${slides.length * 100}%`;
+        slides.forEach(s => s.style.flex = '0 0 100%');
+      }
+      layout();
+
+      // build dots
+      dotsWrap.innerHTML = '';
+      slides.forEach((_, i) => {
+        const d = document.createElement('span');
+        d.className = 'dot' + (i === 0 ? ' is-active' : '');
+        dotsWrap.appendChild(d);
       });
+      const dots = Array.from(dotsWrap.querySelectorAll('.dot'));
 
-      function showSlide(n) {
+      let index = 0;
+      let timer;
+
+      function go(n) {
         index = (n + slides.length) % slides.length;
-        slides.forEach((s, i) => s.classList.toggle("is-active", i === index));
-        dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
+        track.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((d, i) => d.classList.toggle('is-active', i === index));
       }
 
-      prev.addEventListener("click", () => showSlide(index - 1));
-      next.addEventListener("click", () => showSlide(index + 1));
-      dots.forEach((dot, i) => dot.addEventListener("click", () => showSlide(i)));
+      function auto() {
+        clearInterval(timer);
+        timer = setInterval(() => go(index + 1), 7000);
+      }
 
-      setInterval(() => showSlide(index + 1), 7000);
+      prev.addEventListener('click', () => { go(index - 1); auto(); });
+      next.addEventListener('click', () => { go(index + 1); auto(); });
+      dots.forEach((d, i) => d.addEventListener('click', () => { go(i); auto(); }));
+
+      window.addEventListener('resize', layout);
+      auto();
     });
   </script>
 </body>
