@@ -381,5 +381,7 @@ body {
   0%,100% { transform:translateY(0); opacity:0.8; }
   50% { transform:translateY(-4px); opacity:1; }
 }
+.floating-sparkles { opacity:0; animation:fadeIn 1.6s ease forwards; }
+@keyframes fadeIn { to { opacity:1; } }
 
 
