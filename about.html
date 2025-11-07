@@ -11,23 +11,27 @@
 
 <header class="site-header" role="banner">
   <div class="container header-inner">
-    <h1 class="site-title"><a href="index.html" class="logo">Lianet Rodriguez</a></h1>
-    <div class="sparkle-divider">
-  <span class="line"></span>
-  <span class="star">✦</span>
-  <span class="line"></span>
-</div>
+    <h1 class="site-title">
+      <a href="index.html" class="logo">Lianet Rodriguez</a>
+    </h1>
+
+    <!-- ✦ Gold line + star divider under name -->
+    <div class="sparkle-divider" aria-hidden="true">
+      <span class="line"></span>
+      <span class="star">✦</span>
+      <span class="line"></span>
+    </div>
+
+    <!-- Navigation -->
     <nav class="primary-nav" aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="about.html" class="active">About</a>
       <a href="mailto:lianetik96@gmail.com">Contact</a>
     </nav>
-    <div class="floating-sparkles" aria-hidden="true">
-  <span class="sparkle"></span>
-  <span class="sparkle"></span>
-  <span class="sparkle"></span>
-</div>
+
+    <!-- small gold divider under nav -->
+    <div class="nav-divider" aria-hidden="true"></div>
 
   </div>
 </header>
@@ -70,6 +74,9 @@
   <p>&copy; <span id="year">2025</span> Lianet Rodriguez</p>
 </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
