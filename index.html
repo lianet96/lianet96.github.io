@@ -44,27 +44,93 @@
   </header>
 
   <!-- Slideshow (side-to-side, preserves image proportions) -->
-  <div class="slideshow" aria-label="Featured visuals" role="region">
-    <button class="arrow prev" aria-label="Previous slide" type="button">&#10094;</button>
+ <div class="wrapper image-slider" aria-label="Featured visuals" role="region">
+  <!-- Radios -->
+  <input checked type="radio" name="slider" id="slide1" />
+  <input type="radio" name="slider" id="slide2" />
+  <input type="radio" name="slider" id="slide3" />
+  <input type="radio" name="slider" id="slide4" />
+  <input type="radio" name="slider" id="slide5" />
 
-    <div class="slides-track">
-      <!-- Only list the images you want; broken ones get auto-removed by JS -->
-      <figure class="slide"><img src="Untitled_Artwork.jpg" alt="Neon diner concept art" loading="eager" /></figure>
-      <figure class="slide"><img src="p_n_3.png" alt="Blue-lit hooded figure" loading="lazy" /></figure>
-      <figure class="slide"><img src="IMG_2181.jpg" alt="Artist by the ocean" loading="lazy" /></figure>
-      <figure class="slide"><img src="Acceptance_01.jpg" alt="Acceptance still 01" loading="lazy" /></figure>
-      <figure class="slide"><img src="Acceptance_02.jpg" alt="Acceptance still 02" loading="lazy" /></figure>
-      <figure class="slide"><img src="hands.gif" alt="Hands animated loop" loading="lazy" /></figure>
-      <figure class="slide"><img src="characters.png" alt="Character sheet" loading="lazy" /></figure>
-      <figure class="slide"><img src="mermen.png" alt="Mermen concept" loading="lazy" /></figure>
-      <figure class="slide"><img src="sketches.png" alt="Sketches collage" loading="lazy" /></figure>
-      <figure class="slide"><img src="anxiety%204.PNG" alt="Anxiety panel" loading="lazy" /></figure>
+  <!-- Slider viewport -->
+  <div class="slider-wrapper">
+    <div class="inner">
+      <!-- Slide 1 -->
+      <article>
+        <div class="info top-left">
+          <h3>Neon Diner</h3>
+        </div>
+        <img src="Untitled_Artwork.jpg" alt="Neon diner concept art" />
+      </article>
+
+      <!-- Slide 2 -->
+      <article>
+        <div class="info bottom-right">
+          <h3>Film Still – Blue</h3>
+        </div>
+        <img src="p_n_3.png" alt="Blue-lit hooded figure" />
+      </article>
+
+      <!-- Slide 3 -->
+      <article>
+        <div class="info bottom-left">
+          <h3>Acceptance</h3>
+        </div>
+        <img src="Acceptance_01.jpg" alt="Acceptance still 01" />
+      </article>
+
+      <!-- Slide 4 -->
+      <article>
+        <div class="info top-right">
+          <h3>Characters</h3>
+        </div>
+        <img src="characters.png" alt="Character sheet illustration" />
+      </article>
+
+      <!-- Slide 5 -->
+      <article>
+        <div class="info bottom-left">
+          <h3>Mermen</h3>
+        </div>
+        <img src="mermen.png" alt="Mermen concept art" />
+      </article>
     </div>
+    <!-- .inner -->
+  </div>
+  <!-- .slider-wrapper -->
 
-    <div class="slideshow-dots" aria-hidden="true"></div>
-    <button class="arrow next" aria-label="Next slide" type="button">&#10095;</button>
+  <!-- Prev / Next controls -->
+  <div class="slider-prev-next-control">
+    <!-- when slide1 checked -->
+    <label for="slide5" class="prev prev-1"></label>
+    <label for="slide2" class="next next-1"></label>
+
+    <!-- when slide2 checked -->
+    <label for="slide1" class="prev prev-2"></label>
+    <label for="slide3" class="next next-2"></label>
+
+    <!-- when slide3 checked -->
+    <label for="slide2" class="prev prev-3"></label>
+    <label for="slide4" class="next next-3"></label>
+
+    <!-- when slide4 checked -->
+    <label for="slide3" class="prev prev-4"></label>
+    <label for="slide5" class="next next-4"></label>
+
+    <!-- when slide5 checked -->
+    <label for="slide4" class="prev prev-5"></label>
+    <label for="slide1" class="next next-5"></label>
   </div>
 
+  <!-- Dots -->
+  <div class="slider-dot-control">
+    <label for="slide1"></label>
+    <label for="slide2"></label>
+    <label for="slide3"></label>
+    <label for="slide4"></label>
+    <label for="slide5"></label>
+  </div>
+</div>
   <!-- Artist Mission -->
   <section class="hero hero--bg">
     <div class="hero-inner">
