@@ -43,94 +43,95 @@
     </div>
   </header>
 
-  <!-- Slideshow (side-to-side, preserves image proportions) -->
- <div class="wrapper image-slider" aria-label="Featured visuals" role="region">
-  <!-- Radios -->
-  <input checked type="radio" name="slider" id="slide1" />
-  <input type="radio" name="slider" id="slide2" />
-  <input type="radio" name="slider" id="slide3" />
-  <input type="radio" name="slider" id="slide4" />
-  <input type="radio" name="slider" id="slide5" />
+  <!-- Slider -->
+  <div class="wrapper image-slider" aria-label="Featured visuals" role="region">
+    <!-- Radios -->
+    <input checked type="radio" name="slider" id="slide1" />
+    <input type="radio" name="slider" id="slide2" />
+    <input type="radio" name="slider" id="slide3" />
+    <input type="radio" name="slider" id="slide4" />
+    <input type="radio" name="slider" id="slide5" />
 
-  <!-- Slider viewport -->
-  <div class="slider-wrapper">
-    <div class="inner">
-      <!-- Slide 1 -->
-      <article>
-        <div class="info top-left">
-          <h3>Neon Diner</h3>
-        </div>
-        <img src="couple.png" alt="Neon diner concept art" />
-      </article>
+    <!-- Slider viewport -->
+    <div class="slider-wrapper">
+      <div class="inner">
+        <!-- Slide 1 -->
+        <article>
+          <div class="info top-left">
+            <h3>Neon Diner</h3>
+          </div>
+          <img src="couple.png" alt="Neon diner concept art" />
+        </article>
 
-      <!-- Slide 2 -->
-      <article>
-        <div class="info bottom-right">
-          <h3>Film Still – Blue</h3>
-        </div>
-        <img src="sketches.png" alt="Blue-lit hooded figure" />
-      </article>
+        <!-- Slide 2 -->
+        <article>
+          <div class="info bottom-right">
+            <h3>Film Still – Blue</h3>
+          </div>
+          <img src="sketches.png" alt="Blue-lit hooded figure" />
+        </article>
 
-      <!-- Slide 3 -->
-      <article>
-        <div class="info bottom-left">
-          <h3>Acceptance</h3>
-        </div>
-        <img src="Acceptance_01.jpg" alt="Acceptance still 01" />
-      </article>
+        <!-- Slide 3 -->
+        <article>
+          <div class="info bottom-left">
+            <h3>Acceptance</h3>
+          </div>
+          <img src="Acceptance_01.jpg" alt="Acceptance still 01" />
+        </article>
 
-      <!-- Slide 4 -->
-      <article>
-        <div class="info top-right">
-          <h3>Characters</h3>
-        </div>
-        <img src="characters.png" alt="Character sheet illustration" />
-      </article>
+        <!-- Slide 4 -->
+        <article>
+          <div class="info top-right">
+            <h3>Characters</h3>
+          </div>
+          <img src="characters.png" alt="Character sheet illustration" />
+        </article>
 
-      <!-- Slide 5 -->
-      <article>
-        <div class="info bottom-left">
-          <h3>Mermen</h3>
-        </div>
-        <img src="mermen.png" alt="Mermen concept art" />
-      </article>
+        <!-- Slide 5 -->
+        <article>
+          <div class="info bottom-left">
+            <h3>Mermen</h3>
+          </div>
+          <img src="mermen.png" alt="Mermen concept art" />
+        </article>
+      </div>
+      <!-- .inner -->
     </div>
-    <!-- .inner -->
+    <!-- .slider-wrapper -->
+
+    <!-- Prev / Next controls -->
+    <div class="slider-prev-next-control">
+      <!-- when slide1 checked -->
+      <label for="slide5" class="prev prev-1"></label>
+      <label for="slide2" class="next next-1"></label>
+
+      <!-- when slide2 checked -->
+      <label for="slide1" class="prev prev-2"></label>
+      <label for="slide3" class="next next-2"></label>
+
+      <!-- when slide3 checked -->
+      <label for="slide2" class="prev prev-3"></label>
+      <label for="slide4" class="next next-3"></label>
+
+      <!-- when slide4 checked -->
+      <label for="slide3" class="prev prev-4"></label>
+      <label for="slide5" class="next next-4"></label>
+
+      <!-- when slide5 checked -->
+      <label for="slide4" class="prev prev-5"></label>
+      <label for="slide1" class="next next-5"></label>
+    </div>
+
+    <!-- Dots -->
+    <div class="slider-dot-control">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+      <label for="slide4"></label>
+      <label for="slide5"></label>
+    </div>
   </div>
-  <!-- .slider-wrapper -->
 
-  <!-- Prev / Next controls -->
-  <div class="slider-prev-next-control">
-    <!-- when slide1 checked -->
-    <label for="slide5" class="prev prev-1"></label>
-    <label for="slide2" class="next next-1"></label>
-
-    <!-- when slide2 checked -->
-    <label for="slide1" class="prev prev-2"></label>
-    <label for="slide3" class="next next-2"></label>
-
-    <!-- when slide3 checked -->
-    <label for="slide2" class="prev prev-3"></label>
-    <label for="slide4" class="next next-3"></label>
-
-    <!-- when slide4 checked -->
-    <label for="slide3" class="prev prev-4"></label>
-    <label for="slide5" class="next next-4"></label>
-
-    <!-- when slide5 checked -->
-    <label for="slide4" class="prev prev-5"></label>
-    <label for="slide1" class="next next-5"></label>
-  </div>
-
-  <!-- Dots -->
-  <div class="slider-dot-control">
-    <label for="slide1"></label>
-    <label for="slide2"></label>
-    <label for="slide3"></label>
-    <label for="slide4"></label>
-    <label for="slide5"></label>
-  </div>
-</div>
   <!-- Artist Mission -->
   <section class="hero hero--bg">
     <div class="hero-inner">
@@ -202,77 +203,8 @@
   </footer>
 
   <script>
+    // just the year, no slideshow JS needed anymore
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Side-to-side slider that preserves image proportions and auto-removes broken images
-    document.addEventListener('DOMContentLoaded', async () => {
-      const slideshow = document.querySelector('.slideshow');
-      const track = slideshow.querySelector('.slides-track');
-      const prev = slideshow.querySelector('.prev');
-      const next = slideshow.querySelector('.next');
-      const dotsWrap = slideshow.querySelector('.slideshow-dots');
-
-      // preload + remove broken images
-      async function filterBroken() {
-        const figures = Array.from(track.querySelectorAll('.slide'));
-        const checks = figures.map(fig => {
-          const img = fig.querySelector('img');
-          return new Promise(resolve => {
-            const test = new Image();
-            test.onload = () => resolve({ fig, ok: true });
-            test.onerror = () => resolve({ fig, ok: false });
-            test.src = img.src;
-          });
-        });
-        const results = await Promise.all(checks);
-        results.forEach(({ fig, ok }) => { if (!ok) fig.remove(); });
-      }
-
-      await filterBroken();
-
-      let slides = Array.from(track.querySelectorAll('.slide'));
-      if (slides.length === 0) return;
-
-      // set widths for flex track
-      function layout() {
-        slides = Array.from(track.querySelectorAll('.slide'));
-        track.style.width = `${slides.length * 100}%`;
-        slides.forEach(s => s.style.flex = '0 0 100%');
-      }
-      layout();
-
-      // build dots
-      dotsWrap.innerHTML = '';
-      slides.forEach((_, i) => {
-        const d = document.createElement('span');
-        d.className = 'dot' + (i === 0 ? ' is-active' : '');
-        dotsWrap.appendChild(d);
-      });
-      const dots = Array.from(dotsWrap.querySelectorAll('.dot'));
-
-      let index = 0;
-      let timer;
-
-      function go(n) {
-        index = (n + slides.length) % slides.length;
-        track.style.transform = `translateX(-${index * 100}%)`;
-        dots.forEach((d, i) => d.classList.toggle('is-active', i === index));
-      }
-
-      function auto() {
-        clearInterval(timer);
-        /* 👇 slowed from 7000ms (7s) to 12000ms (12s) */
-        timer = setInterval(() => go(index + 1), 12000);
-      }
-
-      prev.addEventListener('click', () => { go(index - 1); auto(); });
-      next.addEventListener('click', () => { go(index + 1); auto(); });
-      dots.forEach((d, i) => d.addEventListener('click', () => { go(i); auto(); }));
-
-      window.addEventListener('resize', layout);
-      auto();
-    });
   </script>
 </body>
 </html>
-
