@@ -176,89 +176,95 @@ body {
 .video-meta h4{ margin:0 0 4px; font-size:1.05rem; color:var(--ink); font-weight:600; }
 .video-meta p{ margin:0; font-size:.95rem; color:var(--muted); }
 
-/* =========================================================
-   Slideshow — side-to-side, preserves original proportions
-   ========================================================= */
-.slideshow{
-  position:relative;
-  width:min(1100px,92vw);
-  margin:0 auto;               /* hugs the tagline */
-  aspect-ratio:16/9;
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 8px 24px rgba(0,0,0,.12);
-  background:#f6e9ee;          /* letterbox color */
+/* ---------- Slideshow (side-to-side, original image proportions) ---------- */
+.slideshow {
+  position: relative;
+  width: min(1100px, 92vw);
+  margin: 0 auto;                 /* sits tight under tagline */
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  background: #f6e9ee;
 }
 
-/* slides track moves horizontally */
-.slides-track{
-  display:flex;
-  height:100%;
-  transform:translateX(0);
-  transition:transform .6s ease-in-out;
+/* Track that moves left/right */
+.slides-track {
+  display: flex;
+  transition: transform 0.7s ease-in-out;
 }
 
-/* each slide fills the frame, centers its media */
-.slide{
-  flex:0 0 100%;
-  height:100%;
-  display:grid;
-  place-items:center;
-  background:#f6e9ee;
+/* Each slide takes full width of the slideshow */
+.slideshow .slide {
+  flex: 0 0 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* preserve original image size (no crop) inside the rounded frame */
-.slide img{
-  max-width:100%;
-  max-height:100%;
-  object-fit:contain;      /* key: NO cropping */
-  object-position:center;
-  display:block;
-  border-radius:10px;      /* soften rectangular edges of the image itself */
-  transition:transform .5s ease, filter .5s ease;
-  filter:brightness(.97) contrast(1.03);
-}
-.slide.is-active img{
-  transform:scale(1.03);
-  filter:brightness(1) contrast(1.05);
+/* Images keep their natural proportions */
+.slideshow img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px; /* softens image edges inside rounded container */
 }
 
-/* subtle inner glow so rectangles feel softer */
-.slideshow::after{
-  content:""; position:absolute; inset:0; border-radius:inherit;
-  box-shadow:inset 0 0 30px rgba(0,0,0,.12); pointer-events:none;
+/* Dots */
+.slideshow-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 4;
+}
+.slideshow-dots .dot {
+  width: 9px;
+  height: 9px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.55);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+.slideshow-dots .dot.is-active {
+  background: rgba(255,255,255,0.95);
 }
 
-/* dots */
-.slideshow-dots{
-  position:absolute; left:50%; bottom:10px; transform:translateX(-50%);
-  display:flex; gap:8px; z-index:4;
+/* Arrows */
+.slideshow .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.18);
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity .3s ease, background .25s ease, transform .15s ease;
+  z-index: 3;
 }
-.slideshow-dots .dot{
-  width:9px; height:9px; border:0; border-radius:50%;
-  background:rgba(255,255,255,.55);
-  box-shadow:0 1px 3px rgba(0,0,0,.15); cursor:pointer;
+.slideshow:hover .arrow { opacity: 1; }
+.slideshow .arrow:hover,
+.slideshow .arrow:focus-visible {
+  background: rgba(0,0,0,0.35);
+  transform: translateY(-50%) scale(1.05);
+  outline: var(--ring);
+  outline-offset: 2px;
 }
-.slideshow-dots .dot.is-active{ background:rgba(255,255,255,.95); }
+.slideshow .arrow:active { transform: translateY(-50%) scale(0.98); }
+.slideshow .arrow.prev { left: 16px; }
+.slideshow .arrow.next { right: 16px; }
 
-/* arrows */
-.slideshow .arrow{
-  position:absolute; top:50%; transform:translateY(-50%);
-  width:64px; height:64px; border:none; border-radius:50%;
-  background:rgba(0,0,0,.18); color:#fff; font-size:2.3rem;
-  display:flex; align-items:center; justify-content:center;
-  cursor:pointer; opacity:0;
-  transition:opacity .3s, background .25s, transform .15s; z-index:3;
-}
-.slideshow:hover .arrow{ opacity:1; }
-.slideshow .arrow:hover, .slideshow .arrow:focus-visible{
-  background:rgba(0,0,0,.35);
-  transform:translateY(-50%) scale(1.05);
-  outline:var(--ring); outline-offset:2px;
-}
-.slideshow .arrow:active{ transform:translateY(-50%) scale(.98); }
-.slideshow .arrow.prev{ left:16px; }
-.slideshow .arrow.next{ right:16px; }
 
 /* ---------- About Page ---------- */
 .about{ padding-top:0; }
