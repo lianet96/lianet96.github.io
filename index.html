@@ -13,6 +13,9 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon (4-point gold star SVG) -->
+  <link rel="icon" href="star4.svg" type="image/svg+xml" />
 </head>
 
 <body>
@@ -66,15 +69,15 @@
         <!-- Slide 2 -->
         <article>
           <div class="info bottom-right">
-            <h3>Sketches-Concept</h3>
+            <h3>Sketches — Concept</h3>
           </div>
-          <img src="sketches.png" alt="Blue-lit hooded figure" />
+          <img src="sketches.png" alt="Sketches concept sheet" />
         </article>
 
         <!-- Slide 3 -->
         <article>
           <div class="info bottom-left">
-            <h3>Acceptance- Film Still</h3>
+            <h3>Acceptance — Film Still</h3>
           </div>
           <img src="Acceptance_01.png" alt="Acceptance still 01" />
         </article>
@@ -82,7 +85,7 @@
         <!-- Slide 4 -->
         <article>
           <div class="info top-right">
-            <h3>Characters Design</h3>
+            <h3>Character Design</h3>
           </div>
           <img src="characters (2).png" alt="Character sheet illustration" />
         </article>
@@ -90,7 +93,7 @@
         <!-- Slide 5 -->
         <article>
           <div class="info bottom-left">
-            <h3>Mermen-Concept Art</h3>
+            <h3>Mermen — Concept Art</h3>
           </div>
           <img src="mermen (2).png" alt="Mermen concept art" />
         </article>
@@ -98,29 +101,6 @@
       <!-- .inner -->
     </div>
     <!-- .slider-wrapper -->
-
-    <!-- Prev / Next controls -->
-    <div class="slider-prev-next-control">
-      <!-- when slide1 checked -->
-      <label for="slide5" class="prev prev-1"></label>
-      <label for="slide2" class="next next-1"></label>
-
-      <!-- when slide2 checked -->
-      <label for="slide1" class="prev prev-2"></label>
-      <label for="slide3" class="next next-2"></label>
-
-      <!-- when slide3 checked -->
-      <label for="slide2" class="prev prev-3"></label>
-      <label for="slide4" class="next next-3"></label>
-
-      <!-- when slide4 checked -->
-      <label for="slide3" class="prev prev-4"></label>
-      <label for="slide5" class="next next-4"></label>
-
-      <!-- when slide5 checked -->
-      <label for="slide4" class="prev prev-5"></label>
-      <label for="slide1" class="next next-5"></label>
-    </div>
 
     <!-- Dots -->
     <div class="slider-dot-control">
@@ -203,7 +183,6 @@
   </footer>
 
   <script>
-    // just the year, no slideshow JS needed anymore
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
