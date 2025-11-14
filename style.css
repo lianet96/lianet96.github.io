@@ -217,6 +217,8 @@ body {
   border-radius: 999px;
   font-size: 0.85rem;
 }
+
+/* specific corners */
 .image-slider .info.top-left {
   top: 18px;
   bottom: auto;
@@ -231,6 +233,12 @@ body {
   bottom: 18px;
   right: 18px;
   left: auto;
+}
+.image-slider .info.bottom-left {
+  bottom: 18px;
+  left: 18px;
+  right: auto;
+  top: auto;
 }
 
 /* Slide positions */
@@ -372,3 +380,4 @@ body {
   color: var(--muted);
   border-top: 1px solid var(--border);
 }
+
