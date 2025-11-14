@@ -183,7 +183,18 @@
   </footer>
 
   <script>
+    // Set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Optional: autoplay slider (every 5 seconds)
+    const slides = ["slide1", "slide2", "slide3", "slide4", "slide5"];
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      const el = document.getElementById(slides[index]);
+      if (el) el.checked = true;
+    }, 5000);
   </script>
 </body>
 </html>
