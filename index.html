@@ -102,6 +102,16 @@
     </div>
     <!-- .slider-wrapper -->
 
+    <!-- Prev / Next arrows -->
+    <div class="slider-prev-next-control">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+      <label for="slide4"></label>
+      <label for="slide5"></label>
+    </div>
+    <!-- .slider-prev-next-control -->
+
     <!-- Dots -->
     <div class="slider-dot-control">
       <label for="slide1"></label>
@@ -110,6 +120,7 @@
       <label for="slide4"></label>
       <label for="slide5"></label>
     </div>
+    <!-- .slider-dot-control -->
   </div>
 
   <!-- Artist Mission -->
@@ -183,18 +194,8 @@
   </footer>
 
   <script>
-    // Set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Optional: autoplay slider (every 5 seconds)
-    const slides = ["slide1", "slide2", "slide3", "slide4", "slide5"];
-    let index = 0;
-
-    setInterval(() => {
-      index = (index + 1) % slides.length;
-      const el = document.getElementById(slides[index]);
-      if (el) el.checked = true;
-    }, 5000);
   </script>
 </body>
 </html>
+
